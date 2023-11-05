@@ -16,6 +16,7 @@ public class SpringBootAsyncTest {
     @EventListener(ApplicationReadyEvent.class)
     public void actionAfterStartup() {
         testClass.runAsyncTask();
+        testClass.internalTask();
     }
 
     public static void main(String[] args) {
