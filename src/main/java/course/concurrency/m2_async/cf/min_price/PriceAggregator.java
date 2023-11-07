@@ -14,6 +14,7 @@ public class PriceAggregator {
     private static final long GAP_MILLIS = 5;
     private static final long SLA_MILLIS = LIMIT_MILLIS - GAP_MILLIS;
 
+    private final ExecutorService executor = Executors.newCachedThreadPool();
     private PriceRetriever priceRetriever = new PriceRetriever();
 
     public void setPriceRetriever(PriceRetriever priceRetriever) {
@@ -27,8 +28,6 @@ public class PriceAggregator {
     }
 
     public double getMinPrice(long itemId) {
-        ExecutorService executor = Executors.newCachedThreadPool();
-
         List<CompletableFuture<Double>> priceRequests = shopIds.stream()
                 .map(shopId -> CompletableFuture.supplyAsync(() -> priceRetriever.getPrice(itemId, shopId), executor)
                         .completeOnTimeout(Double.NaN, SLA_MILLIS, TimeUnit.MILLISECONDS)
@@ -38,7 +37,7 @@ public class PriceAggregator {
 
         return priceRequests.stream()
                 .map(CompletableFuture::join)
-                .filter(price -> Double.compare(price, Double.NaN) != 0)
+                .filter(price -> !price.isNaN())
                 .min(Double::compareTo)
                 .orElse(Double.NaN);
     }
