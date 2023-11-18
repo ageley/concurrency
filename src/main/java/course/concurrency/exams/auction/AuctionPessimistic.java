@@ -11,12 +11,16 @@ public class AuctionPessimistic implements Auction {
     private Bid latestBid;
 
     public boolean propose(Bid bid) {
-        if (bid.getPrice() > latestBid.getPrice()) {
+        if (latestBid != null) {
+            if (bid.getPrice() <= latestBid.getPrice()) {
+                return false;
+            }
+
             notifier.sendOutdatedMessage(latestBid);
-            latestBid = bid;
-            return true;
         }
-        return false;
+
+        latestBid = bid;
+        return true;
     }
 
     public Bid getLatestBid() {
