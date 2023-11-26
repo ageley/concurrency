@@ -1,7 +1,5 @@
 package course.concurrency.m3_shared.immutable;
 
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 import static course.concurrency.m3_shared.immutable.Order.Status.IN_PROGRESS;
@@ -19,7 +17,7 @@ public final class Order {
 
     private Order(Long id, List<Item> items, PaymentInfo paymentInfo, boolean isPacked, Status status) {
         this.id = id;
-        this.items = new ArrayList<>(items);
+        this.items = List.copyOf(items);
         this.paymentInfo = paymentInfo;
         this.isPacked = isPacked;
         this.status = status;
@@ -38,7 +36,7 @@ public final class Order {
     }
 
     public List<Item> getItems() {
-        return Collections.unmodifiableList(items);
+        return items;
     }
 
     public PaymentInfo getPaymentInfo() {
