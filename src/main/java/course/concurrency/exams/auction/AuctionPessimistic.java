@@ -1,49 +1,50 @@
 package course.concurrency.exams.auction;
 
-import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReadWriteLock;
-import java.util.concurrent.locks.ReentrantReadWriteLock;
-
 public class AuctionPessimistic implements Auction {
 
     private final Notifier notifier;
-    private final ReadWriteLock lock;
-    private Bid latestBid;
+    private final Object lock;
+    private volatile Bid latestBid;
 
     public AuctionPessimistic(Notifier notifier) {
         this.notifier = notifier;
-        this.lock = new ReentrantReadWriteLock();
+        this.lock = new Object();
     }
 
     public boolean propose(Bid bid) {
-        Lock writeLock = lock.writeLock();
-
-        try {
-            writeLock.lock();
-
-            if (latestBid != null) {
-                if (bid.getPrice() <= latestBid.getPrice()) {
-                    return false;
+        if (latestBid == null) {
+            synchronized (lock) {
+                if (latestBid == null) {
+                    latestBid = bid;
+                    return true;
                 }
-
-                notifier.sendOutdatedMessage(latestBid);
             }
-
-            latestBid = bid;
-            return true;
-        } finally {
-            writeLock.unlock();
         }
+
+        if (bid.getPrice() <= latestBid.getPrice()) {
+            return false;
+        }
+
+        Bid tempLatestBid;
+        boolean isBidApproved;
+
+        synchronized (lock) {
+            tempLatestBid = latestBid;
+            isBidApproved = bid.getPrice() > tempLatestBid.getPrice();
+
+            if (isBidApproved) {
+                latestBid = bid;
+            }
+        }
+
+        if (isBidApproved) {
+            notifier.sendOutdatedMessage(tempLatestBid);
+        }
+
+        return isBidApproved;
     }
 
     public Bid getLatestBid() {
-        Lock readLock = lock.readLock();
-
-        try {
-            readLock.lock();
-            return latestBid;
-        } finally {
-            readLock.unlock();
-        }
+        return latestBid;
     }
 }
