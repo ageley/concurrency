@@ -1,19 +1,13 @@
 package course.concurrency.exams.auction;
 
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
+import java.util.concurrent.CompletableFuture;
 
 public class Notifier {
-    private static final int MAX_THREADS = Runtime.getRuntime().availableProcessors();
-
-    private final ExecutorService executor;
-
-    public Notifier() {
-        executor = Executors.newFixedThreadPool(MAX_THREADS);
-    }
 
     public void sendOutdatedMessage(Bid bid) {
-        executor.submit(this::imitateSending);
+        if (bid.getId() != Bid.DEFAULT_VALUE) {
+            CompletableFuture.runAsync(this::imitateSending);
+        }
     }
 
     private void imitateSending() {
@@ -24,6 +18,5 @@ public class Notifier {
     }
 
     public void shutdown() {
-        executor.shutdown();
     }
 }
