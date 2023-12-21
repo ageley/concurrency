@@ -1,19 +1,20 @@
 package course.concurrency.m3_shared.collections;
 
-import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.atomic.LongAdder;
+import java.util.stream.Collectors;
 
 public class RestaurantService {
 
-    private Map<String, Restaurant> restaurantMap = new ConcurrentHashMap<>() {{
+    private final Map<String, Restaurant> restaurantMap = new ConcurrentHashMap<>() {{
         put("A", new Restaurant("A"));
         put("B", new Restaurant("B"));
         put("C", new Restaurant("C"));
     }};
 
-    private Object stat;
+    private final Map<String, LongAdder> stat = new ConcurrentHashMap<>();
 
     public Restaurant getByName(String restaurantName) {
         addToStat(restaurantName);
@@ -21,11 +22,13 @@ public class RestaurantService {
     }
 
     public void addToStat(String restaurantName) {
-        // your code
+        stat.computeIfAbsent(restaurantName, name -> new LongAdder()).increment();
     }
 
     public Set<String> printStat() {
-        // your code
-        return new HashSet<>();
+        return stat.entrySet()
+                .stream()
+                .map(entry -> entry.getKey() + " - " + entry.getValue().sum())
+                .collect(Collectors.toSet());
     }
 }
