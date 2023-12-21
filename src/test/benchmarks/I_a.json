@@ -1,0 +1,4538 @@
+[
+  {
+    "jmhVersion": "1.35",
+    "params": {
+      "tool": "AtomicLong_counter",
+      "metric": "all"
+    },
+    "mode": "thrpt",
+    "threads": 4,
+    "benchmark": "r3w1",
+    "forks": 1,
+    "jvm": "/usr/lib/jvm/java-11-openjdk-amd64/bin/java",
+    "jvmArgs": [
+      "-javaagent:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/lib/idea_rt.jar=43053:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin",
+      "-Dfile.encoding=UTF-8"
+    ],
+    "jdkVersion": "11.0.21",
+    "vmName": "OpenJDK 64-Bit Server VM",
+    "vmVersion": "11.0.21+9-post-Ubuntu-0ubuntu122.04",
+    "warmupIterations": 5,
+    "warmupTime": "10 s",
+    "warmupBatchSize": 1,
+    "measurementIterations": 5,
+    "measurementTime": "10 s",
+    "measurementBatchSize": 1,
+    "primaryMetric": {
+      "score": 311928.4116509734,
+      "scoreError": 32105.15566566657,
+      "scoreConfidence": [
+        279823.2559853068,
+        344033.56731663994
+      ],
+      "scorePercentiles": {
+        "0.0": 302859.23594391276,
+        "50.0": 313389.0446994559,
+        "90.0": 320644.71718770417,
+        "95.0": 320644.71718770417,
+        "99.0": 320644.71718770417,
+        "99.9": 320644.71718770417,
+        "99.99": 320644.71718770417,
+        "99.999": 320644.71718770417,
+        "99.9999": 320644.71718770417,
+        "100.0": 320644.71718770417
+      },
+      "scoreUnit": "ops/ms",
+      "rawData": [
+        [
+          302859.23594391276,
+          303723.000571718,
+          313389.0446994559,
+          320644.71718770417,
+          319026.0598520761
+        ]
+      ]
+    },
+    "secondaryMetrics": {}
+  },
+  {
+    "jmhVersion": "1.35",
+    "params": {
+      "tool": "AtomicLong_counter",
+      "metric": "all"
+    },
+    "mode": "thrpt",
+    "threads": 8,
+    "benchmark": "r7w1",
+    "forks": 1,
+    "jvm": "/usr/lib/jvm/java-11-openjdk-amd64/bin/java",
+    "jvmArgs": [
+      "-javaagent:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/lib/idea_rt.jar=40851:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin",
+      "-Dfile.encoding=UTF-8"
+    ],
+    "jdkVersion": "11.0.21",
+    "vmName": "OpenJDK 64-Bit Server VM",
+    "vmVersion": "11.0.21+9-post-Ubuntu-0ubuntu122.04",
+    "warmupIterations": 5,
+    "warmupTime": "10 s",
+    "warmupBatchSize": 1,
+    "measurementIterations": 5,
+    "measurementTime": "10 s",
+    "measurementBatchSize": 1,
+    "primaryMetric": {
+      "score": 479768.4157719139,
+      "scoreError": 64802.68665700603,
+      "scoreConfidence": [
+        414965.72911490785,
+        544571.1024289199
+      ],
+      "scorePercentiles": {
+        "0.0": 461231.00851954205,
+        "50.0": 487215.5268072522,
+        "90.0": 499745.154182049,
+        "95.0": 499745.154182049,
+        "99.0": 499745.154182049,
+        "99.9": 499745.154182049,
+        "99.99": 499745.154182049,
+        "99.999": 499745.154182049,
+        "99.9999": 499745.154182049,
+        "100.0": 499745.154182049
+      },
+      "scoreUnit": "ops/ms",
+      "rawData": [
+        [
+          463175.73952733056,
+          487215.5268072522,
+          487474.64982339554,
+          499745.154182049,
+          461231.00851954205
+        ]
+      ]
+    },
+    "secondaryMetrics": {}
+  },
+  {
+    "jmhVersion": "1.35",
+    "params": {
+      "tool": "AtomicLong_counter",
+      "metric": "all"
+    },
+    "mode": "thrpt",
+    "threads": 16,
+    "benchmark": "r15w1",
+    "forks": 1,
+    "jvm": "/usr/lib/jvm/java-11-openjdk-amd64/bin/java",
+    "jvmArgs": [
+      "-javaagent:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/lib/idea_rt.jar=40913:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin",
+      "-Dfile.encoding=UTF-8"
+    ],
+    "jdkVersion": "11.0.21",
+    "vmName": "OpenJDK 64-Bit Server VM",
+    "vmVersion": "11.0.21+9-post-Ubuntu-0ubuntu122.04",
+    "warmupIterations": 5,
+    "warmupTime": "10 s",
+    "warmupBatchSize": 1,
+    "measurementIterations": 5,
+    "measurementTime": "10 s",
+    "measurementBatchSize": 1,
+    "primaryMetric": {
+      "score": 943584.1860213628,
+      "scoreError": 103934.77423403604,
+      "scoreConfidence": [
+        839649.4117873267,
+        1047518.9602553989
+      ],
+      "scorePercentiles": {
+        "0.0": 912148.7956299696,
+        "50.0": 940344.5026233456,
+        "90.0": 978123.4190199497,
+        "95.0": 978123.4190199497,
+        "99.0": 978123.4190199497,
+        "99.9": 978123.4190199497,
+        "99.99": 978123.4190199497,
+        "99.999": 978123.4190199497,
+        "99.9999": 978123.4190199497,
+        "100.0": 978123.4190199497
+      },
+      "scoreUnit": "ops/ms",
+      "rawData": [
+        [
+          978123.4190199497,
+          912148.7956299696,
+          962658.9970318114,
+          924645.2158017373,
+          940344.5026233456
+        ]
+      ]
+    },
+    "secondaryMetrics": {}
+  },
+  {
+    "jmhVersion": "1.35",
+    "params": {
+      "tool": "AtomicLong_counter",
+      "metric": "read"
+    },
+    "mode": "thrpt",
+    "threads": 4,
+    "benchmark": "r3w1",
+    "forks": 1,
+    "jvm": "/usr/lib/jvm/java-11-openjdk-amd64/bin/java",
+    "jvmArgs": [
+      "-javaagent:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/lib/idea_rt.jar=43053:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin",
+      "-Dfile.encoding=UTF-8"
+    ],
+    "jdkVersion": "11.0.21",
+    "vmName": "OpenJDK 64-Bit Server VM",
+    "vmVersion": "11.0.21+9-post-Ubuntu-0ubuntu122.04",
+    "warmupIterations": 5,
+    "warmupTime": "10 s",
+    "warmupBatchSize": 1,
+    "measurementIterations": 5,
+    "measurementTime": "10 s",
+    "measurementBatchSize": 1,
+    "primaryMetric": {
+      "score": 276443.7637321865,
+      "scoreError": 32420.262317430163,
+      "scoreConfidence": [
+        244023.50141475635,
+        308864.0260496167
+      ],
+      "scorePercentiles": {
+        "0.0": 267355.749034539,
+        "50.0": 277776.27420002344,
+        "90.0": 285305.9084076955,
+        "95.0": 285305.9084076955,
+        "99.0": 285305.9084076955,
+        "99.9": 285305.9084076955,
+        "99.99": 285305.9084076955,
+        "99.999": 285305.9084076955,
+        "99.9999": 285305.9084076955,
+        "100.0": 285305.9084076955
+      },
+      "scoreUnit": "ops/ms",
+      "rawData": [
+        [
+          267355.749034539,
+          268143.49915705365,
+          277776.27420002344,
+          285305.9084076955,
+          283637.387861621
+        ]
+      ]
+    },
+    "secondaryMetrics": {}
+  },
+  {
+    "jmhVersion": "1.35",
+    "params": {
+      "tool": "AtomicLong_counter",
+      "metric": "read"
+    },
+    "mode": "thrpt",
+    "threads": 8,
+    "benchmark": "r7w1",
+    "forks": 1,
+    "jvm": "/usr/lib/jvm/java-11-openjdk-amd64/bin/java",
+    "jvmArgs": [
+      "-javaagent:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/lib/idea_rt.jar=40851:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin",
+      "-Dfile.encoding=UTF-8"
+    ],
+    "jdkVersion": "11.0.21",
+    "vmName": "OpenJDK 64-Bit Server VM",
+    "vmVersion": "11.0.21+9-post-Ubuntu-0ubuntu122.04",
+    "warmupIterations": 5,
+    "warmupTime": "10 s",
+    "warmupBatchSize": 1,
+    "measurementIterations": 5,
+    "measurementTime": "10 s",
+    "measurementBatchSize": 1,
+    "primaryMetric": {
+      "score": 462786.29947836156,
+      "scoreError": 70605.81552545166,
+      "scoreConfidence": [
+        392180.4839529099,
+        533392.1150038132
+      ],
+      "scorePercentiles": {
+        "0.0": 441882.03767109703,
+        "50.0": 471256.6067412741,
+        "90.0": 484031.14322602656,
+        "95.0": 484031.14322602656,
+        "99.0": 484031.14322602656,
+        "99.9": 484031.14322602656,
+        "99.99": 484031.14322602656,
+        "99.999": 484031.14322602656,
+        "99.9999": 484031.14322602656,
+        "100.0": 484031.14322602656
+      },
+      "scoreUnit": "ops/ms",
+      "rawData": [
+        [
+          441882.03767109703,
+          471256.6067412741,
+          471532.99551602424,
+          484031.14322602656,
+          445228.714237386
+        ]
+      ]
+    },
+    "secondaryMetrics": {}
+  },
+  {
+    "jmhVersion": "1.35",
+    "params": {
+      "tool": "AtomicLong_counter",
+      "metric": "read"
+    },
+    "mode": "thrpt",
+    "threads": 16,
+    "benchmark": "r15w1",
+    "forks": 1,
+    "jvm": "/usr/lib/jvm/java-11-openjdk-amd64/bin/java",
+    "jvmArgs": [
+      "-javaagent:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/lib/idea_rt.jar=40913:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin",
+      "-Dfile.encoding=UTF-8"
+    ],
+    "jdkVersion": "11.0.21",
+    "vmName": "OpenJDK 64-Bit Server VM",
+    "vmVersion": "11.0.21+9-post-Ubuntu-0ubuntu122.04",
+    "warmupIterations": 5,
+    "warmupTime": "10 s",
+    "warmupBatchSize": 1,
+    "measurementIterations": 5,
+    "measurementTime": "10 s",
+    "measurementBatchSize": 1,
+    "primaryMetric": {
+      "score": 934128.6286458683,
+      "scoreError": 104668.53784512976,
+      "scoreConfidence": [
+        829460.0908007385,
+        1038797.166490998
+      ],
+      "scorePercentiles": {
+        "0.0": 902800.305504313,
+        "50.0": 930434.0016156585,
+        "90.0": 969107.3821545345,
+        "95.0": 969107.3821545345,
+        "99.0": 969107.3821545345,
+        "99.9": 969107.3821545345,
+        "99.99": 969107.3821545345,
+        "99.999": 969107.3821545345,
+        "99.9999": 969107.3821545345,
+        "100.0": 969107.3821545345
+      },
+      "scoreUnit": "ops/ms",
+      "rawData": [
+        [
+          969107.3821545345,
+          902800.305504313,
+          953344.9333579924,
+          914956.520596843,
+          930434.0016156585
+        ]
+      ]
+    },
+    "secondaryMetrics": {}
+  },
+  {
+    "jmhVersion": "1.35",
+    "params": {
+      "tool": "AtomicLong_counter",
+      "metric": "write"
+    },
+    "mode": "thrpt",
+    "threads": 4,
+    "benchmark": "r3w1",
+    "forks": 1,
+    "jvm": "/usr/lib/jvm/java-11-openjdk-amd64/bin/java",
+    "jvmArgs": [
+      "-javaagent:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/lib/idea_rt.jar=43053:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin",
+      "-Dfile.encoding=UTF-8"
+    ],
+    "jdkVersion": "11.0.21",
+    "vmName": "OpenJDK 64-Bit Server VM",
+    "vmVersion": "11.0.21+9-post-Ubuntu-0ubuntu122.04",
+    "warmupIterations": 5,
+    "warmupTime": "10 s",
+    "warmupBatchSize": 1,
+    "measurementIterations": 5,
+    "measurementTime": "10 s",
+    "measurementBatchSize": 1,
+    "primaryMetric": {
+      "score": 35484.647918786875,
+      "scoreError": 456.62176372810507,
+      "scoreConfidence": [
+        35028.02615505877,
+        35941.26968251498
+      ],
+      "scorePercentiles": {
+        "0.0": 35338.80878000866,
+        "50.0": 35503.48690937374,
+        "90.0": 35612.77049943245,
+        "95.0": 35612.77049943245,
+        "99.0": 35612.77049943245,
+        "99.9": 35612.77049943245,
+        "99.99": 35612.77049943245,
+        "99.999": 35612.77049943245,
+        "99.9999": 35612.77049943245,
+        "100.0": 35612.77049943245
+      },
+      "scoreUnit": "ops/ms",
+      "rawData": [
+        [
+          35503.48690937374,
+          35579.50141466433,
+          35612.77049943245,
+          35338.80878000866,
+          35388.67199045517
+        ]
+      ]
+    },
+    "secondaryMetrics": {}
+  },
+  {
+    "jmhVersion": "1.35",
+    "params": {
+      "tool": "AtomicLong_counter",
+      "metric": "write"
+    },
+    "mode": "thrpt",
+    "threads": 8,
+    "benchmark": "r7w1",
+    "forks": 1,
+    "jvm": "/usr/lib/jvm/java-11-openjdk-amd64/bin/java",
+    "jvmArgs": [
+      "-javaagent:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/lib/idea_rt.jar=40851:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin",
+      "-Dfile.encoding=UTF-8"
+    ],
+    "jdkVersion": "11.0.21",
+    "vmName": "OpenJDK 64-Bit Server VM",
+    "vmVersion": "11.0.21+9-post-Ubuntu-0ubuntu122.04",
+    "warmupIterations": 5,
+    "warmupTime": "10 s",
+    "warmupBatchSize": 1,
+    "measurementIterations": 5,
+    "measurementTime": "10 s",
+    "measurementBatchSize": 1,
+    "primaryMetric": {
+      "score": 16982.116293552273,
+      "scoreError": 9291.030902935554,
+      "scoreConfidence": [
+        7691.085390616719,
+        26273.14719648783
+      ],
+      "scorePercentiles": {
+        "0.0": 15714.010956022492,
+        "50.0": 15958.920065978078,
+        "90.0": 21293.70185623346,
+        "95.0": 21293.70185623346,
+        "99.0": 21293.70185623346,
+        "99.9": 21293.70185623346,
+        "99.99": 21293.70185623346,
+        "99.999": 21293.70185623346,
+        "99.9999": 21293.70185623346,
+        "100.0": 21293.70185623346
+      },
+      "scoreUnit": "ops/ms",
+      "rawData": [
+        [
+          21293.70185623346,
+          15958.920065978078,
+          15941.654307371311,
+          15714.010956022492,
+          16002.294282156026
+        ]
+      ]
+    },
+    "secondaryMetrics": {}
+  },
+  {
+    "jmhVersion": "1.35",
+    "params": {
+      "tool": "AtomicLong_counter",
+      "metric": "write"
+    },
+    "mode": "thrpt",
+    "threads": 16,
+    "benchmark": "r15w1",
+    "forks": 1,
+    "jvm": "/usr/lib/jvm/java-11-openjdk-amd64/bin/java",
+    "jvmArgs": [
+      "-javaagent:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/lib/idea_rt.jar=40913:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin",
+      "-Dfile.encoding=UTF-8"
+    ],
+    "jdkVersion": "11.0.21",
+    "vmName": "OpenJDK 64-Bit Server VM",
+    "vmVersion": "11.0.21+9-post-Ubuntu-0ubuntu122.04",
+    "warmupIterations": 5,
+    "warmupTime": "10 s",
+    "warmupBatchSize": 1,
+    "measurementIterations": 5,
+    "measurementTime": "10 s",
+    "measurementBatchSize": 1,
+    "primaryMetric": {
+      "score": 9455.557375494454,
+      "scoreError": 1342.1981287415292,
+      "scoreConfidence": [
+        8113.359246752925,
+        10797.755504235984
+      ],
+      "scorePercentiles": {
+        "0.0": 9016.036865415259,
+        "50.0": 9348.49012565674,
+        "90.0": 9910.501007686998,
+        "95.0": 9910.501007686998,
+        "99.0": 9910.501007686998,
+        "99.9": 9910.501007686998,
+        "99.99": 9910.501007686998,
+        "99.999": 9910.501007686998,
+        "99.9999": 9910.501007686998,
+        "100.0": 9910.501007686998
+      },
+      "scoreUnit": "ops/ms",
+      "rawData": [
+        [
+          9016.036865415259,
+          9348.49012565674,
+          9314.063673818964,
+          9688.695204894315,
+          9910.501007686998
+        ]
+      ]
+    },
+    "secondaryMetrics": {}
+  },
+  {
+    "jmhVersion": "1.35",
+    "params": {
+      "tool": "LongAdder_counter",
+      "metric": "all"
+    },
+    "mode": "thrpt",
+    "threads": 4,
+    "benchmark": "r3w1",
+    "forks": 1,
+    "jvm": "/usr/lib/jvm/java-11-openjdk-amd64/bin/java",
+    "jvmArgs": [
+      "-javaagent:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/lib/idea_rt.jar=43053:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin",
+      "-Dfile.encoding=UTF-8"
+    ],
+    "jdkVersion": "11.0.21",
+    "vmName": "OpenJDK 64-Bit Server VM",
+    "vmVersion": "11.0.21+9-post-Ubuntu-0ubuntu122.04",
+    "warmupIterations": 5,
+    "warmupTime": "10 s",
+    "warmupBatchSize": 1,
+    "measurementIterations": 5,
+    "measurementTime": "10 s",
+    "measurementBatchSize": 1,
+    "primaryMetric": {
+      "score": 466462.72433025454,
+      "scoreError": 61230.18626431978,
+      "scoreConfidence": [
+        405232.5380659348,
+        527692.9105945743
+      ],
+      "scorePercentiles": {
+        "0.0": 454255.2906552524,
+        "50.0": 455605.9209144972,
+        "90.0": 485029.50505651307,
+        "95.0": 485029.50505651307,
+        "99.0": 485029.50505651307,
+        "99.9": 485029.50505651307,
+        "99.99": 485029.50505651307,
+        "99.999": 485029.50505651307,
+        "99.9999": 485029.50505651307,
+        "100.0": 485029.50505651307
+      },
+      "scoreUnit": "ops/ms",
+      "rawData": [
+        [
+          454753.06921245053,
+          455605.9209144972,
+          485029.50505651307,
+          482669.83581255947,
+          454255.2906552524
+        ]
+      ]
+    },
+    "secondaryMetrics": {}
+  },
+  {
+    "jmhVersion": "1.35",
+    "params": {
+      "tool": "LongAdder_counter",
+      "metric": "all"
+    },
+    "mode": "thrpt",
+    "threads": 8,
+    "benchmark": "r7w1",
+    "forks": 1,
+    "jvm": "/usr/lib/jvm/java-11-openjdk-amd64/bin/java",
+    "jvmArgs": [
+      "-javaagent:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/lib/idea_rt.jar=40851:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin",
+      "-Dfile.encoding=UTF-8"
+    ],
+    "jdkVersion": "11.0.21",
+    "vmName": "OpenJDK 64-Bit Server VM",
+    "vmVersion": "11.0.21+9-post-Ubuntu-0ubuntu122.04",
+    "warmupIterations": 5,
+    "warmupTime": "10 s",
+    "warmupBatchSize": 1,
+    "measurementIterations": 5,
+    "measurementTime": "10 s",
+    "measurementBatchSize": 1,
+    "primaryMetric": {
+      "score": 476533.1861361208,
+      "scoreError": 60107.229213613195,
+      "scoreConfidence": [
+        416425.9569225076,
+        536640.415349734
+      ],
+      "scorePercentiles": {
+        "0.0": 457610.9889688233,
+        "50.0": 481982.06692174735,
+        "90.0": 490559.73436431814,
+        "95.0": 490559.73436431814,
+        "99.0": 490559.73436431814,
+        "99.9": 490559.73436431814,
+        "99.99": 490559.73436431814,
+        "99.999": 490559.73436431814,
+        "99.9999": 490559.73436431814,
+        "100.0": 490559.73436431814
+      },
+      "scoreUnit": "ops/ms",
+      "rawData": [
+        [
+          481982.06692174735,
+          457610.9889688233,
+          462292.176656258,
+          490220.9637694572,
+          490559.73436431814
+        ]
+      ]
+    },
+    "secondaryMetrics": {}
+  },
+  {
+    "jmhVersion": "1.35",
+    "params": {
+      "tool": "LongAdder_counter",
+      "metric": "all"
+    },
+    "mode": "thrpt",
+    "threads": 16,
+    "benchmark": "r15w1",
+    "forks": 1,
+    "jvm": "/usr/lib/jvm/java-11-openjdk-amd64/bin/java",
+    "jvmArgs": [
+      "-javaagent:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/lib/idea_rt.jar=40913:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin",
+      "-Dfile.encoding=UTF-8"
+    ],
+    "jdkVersion": "11.0.21",
+    "vmName": "OpenJDK 64-Bit Server VM",
+    "vmVersion": "11.0.21+9-post-Ubuntu-0ubuntu122.04",
+    "warmupIterations": 5,
+    "warmupTime": "10 s",
+    "warmupBatchSize": 1,
+    "measurementIterations": 5,
+    "measurementTime": "10 s",
+    "measurementBatchSize": 1,
+    "primaryMetric": {
+      "score": 904809.558961178,
+      "scoreError": 246696.40328787806,
+      "scoreConfidence": [
+        658113.1556732999,
+        1151505.962249056
+      ],
+      "scorePercentiles": {
+        "0.0": 791187.6583864366,
+        "50.0": 932000.4628094318,
+        "90.0": 940493.1965842046,
+        "95.0": 940493.1965842046,
+        "99.0": 940493.1965842046,
+        "99.9": 940493.1965842046,
+        "99.99": 940493.1965842046,
+        "99.999": 940493.1965842046,
+        "99.9999": 940493.1965842046,
+        "100.0": 940493.1965842046
+      },
+      "scoreUnit": "ops/ms",
+      "rawData": [
+        [
+          940493.1965842046,
+          919992.5974141957,
+          791187.6583864366,
+          932000.4628094318,
+          940373.8796116208
+        ]
+      ]
+    },
+    "secondaryMetrics": {}
+  },
+  {
+    "jmhVersion": "1.35",
+    "params": {
+      "tool": "LongAdder_counter",
+      "metric": "read"
+    },
+    "mode": "thrpt",
+    "threads": 4,
+    "benchmark": "r3w1",
+    "forks": 1,
+    "jvm": "/usr/lib/jvm/java-11-openjdk-amd64/bin/java",
+    "jvmArgs": [
+      "-javaagent:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/lib/idea_rt.jar=43053:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin",
+      "-Dfile.encoding=UTF-8"
+    ],
+    "jdkVersion": "11.0.21",
+    "vmName": "OpenJDK 64-Bit Server VM",
+    "vmVersion": "11.0.21+9-post-Ubuntu-0ubuntu122.04",
+    "warmupIterations": 5,
+    "warmupTime": "10 s",
+    "warmupBatchSize": 1,
+    "measurementIterations": 5,
+    "measurementTime": "10 s",
+    "measurementBatchSize": 1,
+    "primaryMetric": {
+      "score": 452466.0772499065,
+      "scoreError": 69287.67155561536,
+      "scoreConfidence": [
+        383178.4056942911,
+        521753.7488055219
+      ],
+      "scorePercentiles": {
+        "0.0": 438684.83374237973,
+        "50.0": 440129.19602970197,
+        "90.0": 473373.99597694975,
+        "95.0": 473373.99597694975,
+        "99.0": 473373.99597694975,
+        "99.9": 473373.99597694975,
+        "99.99": 473373.99597694975,
+        "99.999": 473373.99597694975,
+        "99.9999": 473373.99597694975,
+        "100.0": 473373.99597694975
+      },
+      "scoreUnit": "ops/ms",
+      "rawData": [
+        [
+          439223.9381295093,
+          440129.19602970197,
+          473373.99597694975,
+          470918.42237099144,
+          438684.83374237973
+        ]
+      ]
+    },
+    "secondaryMetrics": {}
+  },
+  {
+    "jmhVersion": "1.35",
+    "params": {
+      "tool": "LongAdder_counter",
+      "metric": "read"
+    },
+    "mode": "thrpt",
+    "threads": 8,
+    "benchmark": "r7w1",
+    "forks": 1,
+    "jvm": "/usr/lib/jvm/java-11-openjdk-amd64/bin/java",
+    "jvmArgs": [
+      "-javaagent:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/lib/idea_rt.jar=40851:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin",
+      "-Dfile.encoding=UTF-8"
+    ],
+    "jdkVersion": "11.0.21",
+    "vmName": "OpenJDK 64-Bit Server VM",
+    "vmVersion": "11.0.21+9-post-Ubuntu-0ubuntu122.04",
+    "warmupIterations": 5,
+    "warmupTime": "10 s",
+    "warmupBatchSize": 1,
+    "measurementIterations": 5,
+    "measurementTime": "10 s",
+    "measurementBatchSize": 1,
+    "primaryMetric": {
+      "score": 463485.2098849672,
+      "scoreError": 65383.42927116465,
+      "scoreConfidence": [
+        398101.78061380255,
+        528868.6391561319
+      ],
+      "scorePercentiles": {
+        "0.0": 443311.69764209725,
+        "50.0": 468020.6508518974,
+        "90.0": 479226.4943087565,
+        "95.0": 479226.4943087565,
+        "99.0": 479226.4943087565,
+        "99.9": 479226.4943087565,
+        "99.99": 479226.4943087565,
+        "99.999": 479226.4943087565,
+        "99.9999": 479226.4943087565,
+        "100.0": 479226.4943087565
+      },
+      "scoreUnit": "ops/ms",
+      "rawData": [
+        [
+          468020.6508518974,
+          443311.69764209725,
+          447975.1167233306,
+          478892.0898987539,
+          479226.4943087565
+        ]
+      ]
+    },
+    "secondaryMetrics": {}
+  },
+  {
+    "jmhVersion": "1.35",
+    "params": {
+      "tool": "LongAdder_counter",
+      "metric": "read"
+    },
+    "mode": "thrpt",
+    "threads": 16,
+    "benchmark": "r15w1",
+    "forks": 1,
+    "jvm": "/usr/lib/jvm/java-11-openjdk-amd64/bin/java",
+    "jvmArgs": [
+      "-javaagent:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/lib/idea_rt.jar=40913:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin",
+      "-Dfile.encoding=UTF-8"
+    ],
+    "jdkVersion": "11.0.21",
+    "vmName": "OpenJDK 64-Bit Server VM",
+    "vmVersion": "11.0.21+9-post-Ubuntu-0ubuntu122.04",
+    "warmupIterations": 5,
+    "warmupTime": "10 s",
+    "warmupBatchSize": 1,
+    "measurementIterations": 5,
+    "measurementTime": "10 s",
+    "measurementBatchSize": 1,
+    "primaryMetric": {
+      "score": 898673.4216223394,
+      "scoreError": 249694.0337068703,
+      "scoreConfidence": [
+        648979.3879154691,
+        1148367.4553292098
+      ],
+      "scorePercentiles": {
+        "0.0": 783726.5521863553,
+        "50.0": 927296.4170787863,
+        "90.0": 935137.5099466973,
+        "95.0": 935137.5099466973,
+        "99.0": 935137.5099466973,
+        "99.9": 935137.5099466973,
+        "99.99": 935137.5099466973,
+        "99.999": 935137.5099466973,
+        "99.9999": 935137.5099466973,
+        "100.0": 935137.5099466973
+      },
+      "scoreUnit": "ops/ms",
+      "rawData": [
+        [
+          933963.75994063,
+          913242.8689592277,
+          783726.5521863553,
+          927296.4170787863,
+          935137.5099466973
+        ]
+      ]
+    },
+    "secondaryMetrics": {}
+  },
+  {
+    "jmhVersion": "1.35",
+    "params": {
+      "tool": "LongAdder_counter",
+      "metric": "write"
+    },
+    "mode": "thrpt",
+    "threads": 4,
+    "benchmark": "r3w1",
+    "forks": 1,
+    "jvm": "/usr/lib/jvm/java-11-openjdk-amd64/bin/java",
+    "jvmArgs": [
+      "-javaagent:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/lib/idea_rt.jar=43053:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin",
+      "-Dfile.encoding=UTF-8"
+    ],
+    "jdkVersion": "11.0.21",
+    "vmName": "OpenJDK 64-Bit Server VM",
+    "vmVersion": "11.0.21+9-post-Ubuntu-0ubuntu122.04",
+    "warmupIterations": 5,
+    "warmupTime": "10 s",
+    "warmupBatchSize": 1,
+    "measurementIterations": 5,
+    "measurementTime": "10 s",
+    "measurementBatchSize": 1,
+    "primaryMetric": {
+      "score": 13996.647080348102,
+      "scoreError": 8062.943157719988,
+      "scoreConfidence": [
+        5933.703922628114,
+        22059.590238068093
+      ],
+      "scorePercentiles": {
+        "0.0": 11655.509079563377,
+        "50.0": 15476.724884795229,
+        "90.0": 15570.456912872678,
+        "95.0": 15570.456912872678,
+        "99.0": 15570.456912872678,
+        "99.9": 15570.456912872678,
+        "99.99": 15570.456912872678,
+        "99.999": 15570.456912872678,
+        "99.9999": 15570.456912872678,
+        "100.0": 15570.456912872678
+      },
+      "scoreUnit": "ops/ms",
+      "rawData": [
+        [
+          15529.13108294123,
+          15476.724884795229,
+          11655.509079563377,
+          11751.413441568006,
+          15570.456912872678
+        ]
+      ]
+    },
+    "secondaryMetrics": {}
+  },
+  {
+    "jmhVersion": "1.35",
+    "params": {
+      "tool": "LongAdder_counter",
+      "metric": "write"
+    },
+    "mode": "thrpt",
+    "threads": 8,
+    "benchmark": "r7w1",
+    "forks": 1,
+    "jvm": "/usr/lib/jvm/java-11-openjdk-amd64/bin/java",
+    "jvmArgs": [
+      "-javaagent:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/lib/idea_rt.jar=40851:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin",
+      "-Dfile.encoding=UTF-8"
+    ],
+    "jdkVersion": "11.0.21",
+    "vmName": "OpenJDK 64-Bit Server VM",
+    "vmVersion": "11.0.21+9-post-Ubuntu-0ubuntu122.04",
+    "warmupIterations": 5,
+    "warmupTime": "10 s",
+    "warmupBatchSize": 1,
+    "measurementIterations": 5,
+    "measurementTime": "10 s",
+    "measurementBatchSize": 1,
+    "primaryMetric": {
+      "score": 13047.976251153681,
+      "scoreError": 6059.832235381011,
+      "scoreConfidence": [
+        6988.14401577267,
+        19107.80848653469
+      ],
+      "scorePercentiles": {
+        "0.0": 11328.873870703264,
+        "50.0": 13961.416069850002,
+        "90.0": 14317.059932927434,
+        "95.0": 14317.059932927434,
+        "99.0": 14317.059932927434,
+        "99.9": 14317.059932927434,
+        "99.99": 14317.059932927434,
+        "99.999": 14317.059932927434,
+        "99.9999": 14317.059932927434,
+        "100.0": 14317.059932927434
+      },
+      "scoreUnit": "ops/ms",
+      "rawData": [
+        [
+          13961.416069850002,
+          14299.291326726021,
+          14317.059932927434,
+          11328.873870703264,
+          11333.240055561684
+        ]
+      ]
+    },
+    "secondaryMetrics": {}
+  },
+  {
+    "jmhVersion": "1.35",
+    "params": {
+      "tool": "LongAdder_counter",
+      "metric": "write"
+    },
+    "mode": "thrpt",
+    "threads": 16,
+    "benchmark": "r15w1",
+    "forks": 1,
+    "jvm": "/usr/lib/jvm/java-11-openjdk-amd64/bin/java",
+    "jvmArgs": [
+      "-javaagent:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/lib/idea_rt.jar=40913:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin",
+      "-Dfile.encoding=UTF-8"
+    ],
+    "jdkVersion": "11.0.21",
+    "vmName": "OpenJDK 64-Bit Server VM",
+    "vmVersion": "11.0.21+9-post-Ubuntu-0ubuntu122.04",
+    "warmupIterations": 5,
+    "warmupTime": "10 s",
+    "warmupBatchSize": 1,
+    "measurementIterations": 5,
+    "measurementTime": "10 s",
+    "measurementBatchSize": 1,
+    "primaryMetric": {
+      "score": 6136.137338838538,
+      "scoreError": 4368.058321372467,
+      "scoreConfidence": [
+        1768.0790174660715,
+        10504.195660211004
+      ],
+      "scorePercentiles": {
+        "0.0": 4704.045730645343,
+        "50.0": 6529.436643574555,
+        "90.0": 7461.106200081288,
+        "95.0": 7461.106200081288,
+        "99.0": 7461.106200081288,
+        "99.9": 7461.106200081288,
+        "99.99": 7461.106200081288,
+        "99.999": 7461.106200081288,
+        "99.9999": 7461.106200081288,
+        "100.0": 7461.106200081288
+      },
+      "scoreUnit": "ops/ms",
+      "rawData": [
+        [
+          6529.436643574555,
+          6749.7284549679525,
+          7461.106200081288,
+          4704.045730645343,
+          5236.3696649235535
+        ]
+      ]
+    },
+    "secondaryMetrics": {}
+  },
+  {
+    "jmhVersion": "1.35",
+    "params": {
+      "tool": "volatile_synchronized",
+      "metric": "all"
+    },
+    "mode": "thrpt",
+    "threads": 4,
+    "benchmark": "r3w1",
+    "forks": 1,
+    "jvm": "/usr/lib/jvm/java-11-openjdk-amd64/bin/java",
+    "jvmArgs": [
+      "-javaagent:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/lib/idea_rt.jar=43053:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin",
+      "-Dfile.encoding=UTF-8"
+    ],
+    "jdkVersion": "11.0.21",
+    "vmName": "OpenJDK 64-Bit Server VM",
+    "vmVersion": "11.0.21+9-post-Ubuntu-0ubuntu122.04",
+    "warmupIterations": 5,
+    "warmupTime": "10 s",
+    "warmupBatchSize": 1,
+    "measurementIterations": 5,
+    "measurementTime": "10 s",
+    "measurementBatchSize": 1,
+    "primaryMetric": {
+      "score": 566210.7105804456,
+      "scoreError": 24162.163920202107,
+      "scoreConfidence": [
+        542048.5466602435,
+        590372.8745006477
+      ],
+      "scorePercentiles": {
+        "0.0": 560713.9381874163,
+        "50.0": 564576.0404745161,
+        "90.0": 577041.7787305611,
+        "95.0": 577041.7787305611,
+        "99.0": 577041.7787305611,
+        "99.9": 577041.7787305611,
+        "99.99": 577041.7787305611,
+        "99.999": 577041.7787305611,
+        "99.9999": 577041.7787305611,
+        "100.0": 577041.7787305611
+      },
+      "scoreUnit": "ops/ms",
+      "rawData": [
+        [
+          564576.0404745161,
+          560713.9381874163,
+          577041.7787305611,
+          563885.4904568666,
+          564836.3050528676
+        ]
+      ]
+    },
+    "secondaryMetrics": {}
+  },
+  {
+    "jmhVersion": "1.35",
+    "params": {
+      "tool": "volatile_synchronized",
+      "metric": "all"
+    },
+    "mode": "thrpt",
+    "threads": 8,
+    "benchmark": "r7w1",
+    "forks": 1,
+    "jvm": "/usr/lib/jvm/java-11-openjdk-amd64/bin/java",
+    "jvmArgs": [
+      "-javaagent:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/lib/idea_rt.jar=40851:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin",
+      "-Dfile.encoding=UTF-8"
+    ],
+    "jdkVersion": "11.0.21",
+    "vmName": "OpenJDK 64-Bit Server VM",
+    "vmVersion": "11.0.21+9-post-Ubuntu-0ubuntu122.04",
+    "warmupIterations": 5,
+    "warmupTime": "10 s",
+    "warmupBatchSize": 1,
+    "measurementIterations": 5,
+    "measurementTime": "10 s",
+    "measurementBatchSize": 1,
+    "primaryMetric": {
+      "score": 583148.1067095322,
+      "scoreError": 57045.14590396667,
+      "scoreConfidence": [
+        526102.9608055656,
+        640193.2526134988
+      ],
+      "scorePercentiles": {
+        "0.0": 557098.201640294,
+        "50.0": 588294.2909720824,
+        "90.0": 593263.4376467782,
+        "95.0": 593263.4376467782,
+        "99.0": 593263.4376467782,
+        "99.9": 593263.4376467782,
+        "99.99": 593263.4376467782,
+        "99.999": 593263.4376467782,
+        "99.9999": 593263.4376467782,
+        "100.0": 593263.4376467782
+      },
+      "scoreUnit": "ops/ms",
+      "rawData": [
+        [
+          557098.201640294,
+          593263.4376467782,
+          588294.2909720824,
+          591019.7548837793,
+          586064.848404727
+        ]
+      ]
+    },
+    "secondaryMetrics": {}
+  },
+  {
+    "jmhVersion": "1.35",
+    "params": {
+      "tool": "volatile_synchronized",
+      "metric": "all"
+    },
+    "mode": "thrpt",
+    "threads": 16,
+    "benchmark": "r15w1",
+    "forks": 1,
+    "jvm": "/usr/lib/jvm/java-11-openjdk-amd64/bin/java",
+    "jvmArgs": [
+      "-javaagent:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/lib/idea_rt.jar=40913:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin",
+      "-Dfile.encoding=UTF-8"
+    ],
+    "jdkVersion": "11.0.21",
+    "vmName": "OpenJDK 64-Bit Server VM",
+    "vmVersion": "11.0.21+9-post-Ubuntu-0ubuntu122.04",
+    "warmupIterations": 5,
+    "warmupTime": "10 s",
+    "warmupBatchSize": 1,
+    "measurementIterations": 5,
+    "measurementTime": "10 s",
+    "measurementBatchSize": 1,
+    "primaryMetric": {
+      "score": 1063683.8857693437,
+      "scoreError": 273182.7188786877,
+      "scoreConfidence": [
+        790501.166890656,
+        1336866.6046480313
+      ],
+      "scorePercentiles": {
+        "0.0": 937158.7445789267,
+        "50.0": 1090462.2343897985,
+        "90.0": 1103476.6714905575,
+        "95.0": 1103476.6714905575,
+        "99.0": 1103476.6714905575,
+        "99.9": 1103476.6714905575,
+        "99.99": 1103476.6714905575,
+        "99.999": 1103476.6714905575,
+        "99.9999": 1103476.6714905575,
+        "100.0": 1103476.6714905575
+      },
+      "scoreUnit": "ops/ms",
+      "rawData": [
+        [
+          1090462.2343897985,
+          1097279.9014432186,
+          1103476.6714905575,
+          1090041.8769442174,
+          937158.7445789267
+        ]
+      ]
+    },
+    "secondaryMetrics": {}
+  },
+  {
+    "jmhVersion": "1.35",
+    "params": {
+      "tool": "volatile_synchronized",
+      "metric": "read"
+    },
+    "mode": "thrpt",
+    "threads": 4,
+    "benchmark": "r3w1",
+    "forks": 1,
+    "jvm": "/usr/lib/jvm/java-11-openjdk-amd64/bin/java",
+    "jvmArgs": [
+      "-javaagent:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/lib/idea_rt.jar=43053:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin",
+      "-Dfile.encoding=UTF-8"
+    ],
+    "jdkVersion": "11.0.21",
+    "vmName": "OpenJDK 64-Bit Server VM",
+    "vmVersion": "11.0.21+9-post-Ubuntu-0ubuntu122.04",
+    "warmupIterations": 5,
+    "warmupTime": "10 s",
+    "warmupBatchSize": 1,
+    "measurementIterations": 5,
+    "measurementTime": "10 s",
+    "measurementBatchSize": 1,
+    "primaryMetric": {
+      "score": 547541.5897165174,
+      "scoreError": 19558.402566469274,
+      "scoreConfidence": [
+        527983.1871500481,
+        567099.9922829866
+      ],
+      "scorePercentiles": {
+        "0.0": 542820.8822241855,
+        "50.0": 547159.3093360484,
+        "90.0": 555795.9776439214,
+        "95.0": 555795.9776439214,
+        "99.0": 555795.9776439214,
+        "99.9": 555795.9776439214,
+        "99.99": 555795.9776439214,
+        "99.999": 555795.9776439214,
+        "99.9999": 555795.9776439214,
+        "100.0": 555795.9776439214
+      },
+      "scoreUnit": "ops/ms",
+      "rawData": [
+        [
+          547923.3789181949,
+          544008.4004602366,
+          555795.9776439214,
+          547159.3093360484,
+          542820.8822241855
+        ]
+      ]
+    },
+    "secondaryMetrics": {}
+  },
+  {
+    "jmhVersion": "1.35",
+    "params": {
+      "tool": "volatile_synchronized",
+      "metric": "read"
+    },
+    "mode": "thrpt",
+    "threads": 8,
+    "benchmark": "r7w1",
+    "forks": 1,
+    "jvm": "/usr/lib/jvm/java-11-openjdk-amd64/bin/java",
+    "jvmArgs": [
+      "-javaagent:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/lib/idea_rt.jar=40851:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin",
+      "-Dfile.encoding=UTF-8"
+    ],
+    "jdkVersion": "11.0.21",
+    "vmName": "OpenJDK 64-Bit Server VM",
+    "vmVersion": "11.0.21+9-post-Ubuntu-0ubuntu122.04",
+    "warmupIterations": 5,
+    "warmupTime": "10 s",
+    "warmupBatchSize": 1,
+    "measurementIterations": 5,
+    "measurementTime": "10 s",
+    "measurementBatchSize": 1,
+    "primaryMetric": {
+      "score": 560276.221117514,
+      "scoreError": 57188.4168180218,
+      "scoreConfidence": [
+        503087.80429949216,
+        617464.6379355357
+      ],
+      "scorePercentiles": {
+        "0.0": 534124.5897155121,
+        "50.0": 565555.8515820692,
+        "90.0": 570309.2836092991,
+        "95.0": 570309.2836092991,
+        "99.0": 570309.2836092991,
+        "99.9": 570309.2836092991,
+        "99.99": 570309.2836092991,
+        "99.999": 570309.2836092991,
+        "99.9999": 570309.2836092991,
+        "100.0": 570309.2836092991
+      },
+      "scoreUnit": "ops/ms",
+      "rawData": [
+        [
+          534124.5897155121,
+          570309.2836092991,
+          565555.8515820692,
+          568051.5447570459,
+          563339.8359236433
+        ]
+      ]
+    },
+    "secondaryMetrics": {}
+  },
+  {
+    "jmhVersion": "1.35",
+    "params": {
+      "tool": "volatile_synchronized",
+      "metric": "read"
+    },
+    "mode": "thrpt",
+    "threads": 16,
+    "benchmark": "r15w1",
+    "forks": 1,
+    "jvm": "/usr/lib/jvm/java-11-openjdk-amd64/bin/java",
+    "jvmArgs": [
+      "-javaagent:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/lib/idea_rt.jar=40913:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin",
+      "-Dfile.encoding=UTF-8"
+    ],
+    "jdkVersion": "11.0.21",
+    "vmName": "OpenJDK 64-Bit Server VM",
+    "vmVersion": "11.0.21+9-post-Ubuntu-0ubuntu122.04",
+    "warmupIterations": 5,
+    "warmupTime": "10 s",
+    "warmupBatchSize": 1,
+    "measurementIterations": 5,
+    "measurementTime": "10 s",
+    "measurementBatchSize": 1,
+    "primaryMetric": {
+      "score": 1054671.4420542158,
+      "scoreError": 283108.440258678,
+      "scoreConfidence": [
+        771563.0017955378,
+        1337779.8823128939
+      ],
+      "scorePercentiles": {
+        "0.0": 923568.6676128895,
+        "50.0": 1082567.8628426054,
+        "90.0": 1096482.8956564034,
+        "95.0": 1096482.8956564034,
+        "99.0": 1096482.8956564034,
+        "99.9": 1096482.8956564034,
+        "99.99": 1096482.8956564034,
+        "99.999": 1096482.8956564034,
+        "99.9999": 1096482.8956564034,
+        "100.0": 1096482.8956564034
+      },
+      "scoreUnit": "ops/ms",
+      "rawData": [
+        [
+          1082567.8628426054,
+          1088770.2954502364,
+          1096482.8956564034,
+          1081967.4887089436,
+          923568.6676128895
+        ]
+      ]
+    },
+    "secondaryMetrics": {}
+  },
+  {
+    "jmhVersion": "1.35",
+    "params": {
+      "tool": "volatile_synchronized",
+      "metric": "write"
+    },
+    "mode": "thrpt",
+    "threads": 4,
+    "benchmark": "r3w1",
+    "forks": 1,
+    "jvm": "/usr/lib/jvm/java-11-openjdk-amd64/bin/java",
+    "jvmArgs": [
+      "-javaagent:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/lib/idea_rt.jar=43053:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin",
+      "-Dfile.encoding=UTF-8"
+    ],
+    "jdkVersion": "11.0.21",
+    "vmName": "OpenJDK 64-Bit Server VM",
+    "vmVersion": "11.0.21+9-post-Ubuntu-0ubuntu122.04",
+    "warmupIterations": 5,
+    "warmupTime": "10 s",
+    "warmupBatchSize": 1,
+    "measurementIterations": 5,
+    "measurementTime": "10 s",
+    "measurementBatchSize": 1,
+    "primaryMetric": {
+      "score": 18669.120863928165,
+      "scoreError": 10463.163858507207,
+      "scoreConfidence": [
+        8205.957005420958,
+        29132.28472243537
+      ],
+      "scorePercentiles": {
+        "0.0": 16652.661556321185,
+        "50.0": 16726.181120818124,
+        "90.0": 22015.42282868213,
+        "95.0": 22015.42282868213,
+        "99.0": 22015.42282868213,
+        "99.9": 22015.42282868213,
+        "99.99": 22015.42282868213,
+        "99.999": 22015.42282868213,
+        "99.9999": 22015.42282868213,
+        "100.0": 22015.42282868213
+      },
+      "scoreUnit": "ops/ms",
+      "rawData": [
+        [
+          16652.661556321185,
+          16705.537727179635,
+          21245.80108663975,
+          16726.181120818124,
+          22015.42282868213
+        ]
+      ]
+    },
+    "secondaryMetrics": {}
+  },
+  {
+    "jmhVersion": "1.35",
+    "params": {
+      "tool": "volatile_synchronized",
+      "metric": "write"
+    },
+    "mode": "thrpt",
+    "threads": 8,
+    "benchmark": "r7w1",
+    "forks": 1,
+    "jvm": "/usr/lib/jvm/java-11-openjdk-amd64/bin/java",
+    "jvmArgs": [
+      "-javaagent:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/lib/idea_rt.jar=40851:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin",
+      "-Dfile.encoding=UTF-8"
+    ],
+    "jdkVersion": "11.0.21",
+    "vmName": "OpenJDK 64-Bit Server VM",
+    "vmVersion": "11.0.21+9-post-Ubuntu-0ubuntu122.04",
+    "warmupIterations": 5,
+    "warmupTime": "10 s",
+    "warmupBatchSize": 1,
+    "measurementIterations": 5,
+    "measurementTime": "10 s",
+    "measurementBatchSize": 1,
+    "primaryMetric": {
+      "score": 22871.885592018272,
+      "scoreError": 493.7779348096159,
+      "scoreConfidence": [
+        22378.107657208657,
+        23365.663526827888
+      ],
+      "scorePercentiles": {
+        "0.0": 22725.012481083657,
+        "50.0": 22954.154037479035,
+        "90.0": 22973.611924781933,
+        "95.0": 22973.611924781933,
+        "99.0": 22973.611924781933,
+        "99.9": 22973.611924781933,
+        "99.99": 22973.611924781933,
+        "99.999": 22973.611924781933,
+        "99.9999": 22973.611924781933,
+        "100.0": 22973.611924781933
+      },
+      "scoreUnit": "ops/ms",
+      "rawData": [
+        [
+          22973.611924781933,
+          22954.154037479035,
+          22738.439390013355,
+          22968.21012673338,
+          22725.012481083657
+        ]
+      ]
+    },
+    "secondaryMetrics": {}
+  },
+  {
+    "jmhVersion": "1.35",
+    "params": {
+      "tool": "volatile_synchronized",
+      "metric": "write"
+    },
+    "mode": "thrpt",
+    "threads": 16,
+    "benchmark": "r15w1",
+    "forks": 1,
+    "jvm": "/usr/lib/jvm/java-11-openjdk-amd64/bin/java",
+    "jvmArgs": [
+      "-javaagent:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/lib/idea_rt.jar=40913:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin",
+      "-Dfile.encoding=UTF-8"
+    ],
+    "jdkVersion": "11.0.21",
+    "vmName": "OpenJDK 64-Bit Server VM",
+    "vmVersion": "11.0.21+9-post-Ubuntu-0ubuntu122.04",
+    "warmupIterations": 5,
+    "warmupTime": "10 s",
+    "warmupBatchSize": 1,
+    "measurementIterations": 5,
+    "measurementTime": "10 s",
+    "measurementBatchSize": 1,
+    "primaryMetric": {
+      "score": 9012.443715128069,
+      "scoreError": 10080.421250663821,
+      "scoreConfidence": [
+        -1067.9775355357524,
+        19092.86496579189
+      ],
+      "scorePercentiles": {
+        "0.0": 6993.77583415419,
+        "50.0": 8074.388235273797,
+        "90.0": 13590.076966037146,
+        "95.0": 13590.076966037146,
+        "99.0": 13590.076966037146,
+        "99.9": 13590.076966037146,
+        "99.99": 13590.076966037146,
+        "99.999": 13590.076966037146,
+        "99.9999": 13590.076966037146,
+        "100.0": 13590.076966037146
+      },
+      "scoreUnit": "ops/ms",
+      "rawData": [
+        [
+          7894.37154719305,
+          8509.605992982155,
+          6993.77583415419,
+          8074.388235273797,
+          13590.076966037146
+        ]
+      ]
+    },
+    "secondaryMetrics": {}
+  },
+  {
+    "jmhVersion": "1.35",
+    "params": {
+      "tool": "AtomicLong_counter",
+      "metric": "all"
+    },
+    "mode": "thrpt",
+    "threads": 4,
+    "benchmark": "r1w3",
+    "forks": 1,
+    "jvm": "/usr/lib/jvm/java-11-openjdk-amd64/bin/java",
+    "jvmArgs": [
+      "-javaagent:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/lib/idea_rt.jar=36203:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin",
+      "-Dfile.encoding=UTF-8"
+    ],
+    "jdkVersion": "11.0.21",
+    "vmName": "OpenJDK 64-Bit Server VM",
+    "vmVersion": "11.0.21+9-post-Ubuntu-0ubuntu122.04",
+    "warmupIterations": 5,
+    "warmupTime": "10 s",
+    "warmupBatchSize": 1,
+    "measurementIterations": 5,
+    "measurementTime": "10 s",
+    "measurementBatchSize": 1,
+    "primaryMetric": {
+      "score": 122929.87285983367,
+      "scoreError": 26422.600171455957,
+      "scoreConfidence": [
+        96507.27268837772,
+        149352.47303128964
+      ],
+      "scorePercentiles": {
+        "0.0": 118600.53231944774,
+        "50.0": 119425.67295196405,
+        "90.0": 134870.29811422795,
+        "95.0": 134870.29811422795,
+        "99.0": 134870.29811422795,
+        "99.9": 134870.29811422795,
+        "99.99": 134870.29811422795,
+        "99.999": 134870.29811422795,
+        "99.9999": 134870.29811422795,
+        "100.0": 134870.29811422795
+      },
+      "scoreUnit": "ops/ms",
+      "rawData": [
+        [
+          119100.03361436454,
+          119425.67295196405,
+          118600.53231944774,
+          122652.82729916403,
+          134870.29811422795
+        ]
+      ]
+    },
+    "secondaryMetrics": {}
+  },
+  {
+    "jmhVersion": "1.35",
+    "params": {
+      "tool": "AtomicLong_counter",
+      "metric": "all"
+    },
+    "mode": "thrpt",
+    "threads": 8,
+    "benchmark": "r1w7",
+    "forks": 1,
+    "jvm": "/usr/lib/jvm/java-11-openjdk-amd64/bin/java",
+    "jvmArgs": [
+      "-javaagent:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/lib/idea_rt.jar=36959:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin",
+      "-Dfile.encoding=UTF-8"
+    ],
+    "jdkVersion": "11.0.21",
+    "vmName": "OpenJDK 64-Bit Server VM",
+    "vmVersion": "11.0.21+9-post-Ubuntu-0ubuntu122.04",
+    "warmupIterations": 5,
+    "warmupTime": "10 s",
+    "warmupBatchSize": 1,
+    "measurementIterations": 5,
+    "measurementTime": "10 s",
+    "measurementBatchSize": 1,
+    "primaryMetric": {
+      "score": 89448.45939727002,
+      "scoreError": 5141.0793850179,
+      "scoreConfidence": [
+        84307.38001225212,
+        94589.53878228793
+      ],
+      "scorePercentiles": {
+        "0.0": 87459.57680346422,
+        "50.0": 89425.0547917707,
+        "90.0": 91143.32349403398,
+        "95.0": 91143.32349403398,
+        "99.0": 91143.32349403398,
+        "99.9": 91143.32349403398,
+        "99.99": 91143.32349403398,
+        "99.999": 91143.32349403398,
+        "99.9999": 91143.32349403398,
+        "100.0": 91143.32349403398
+      },
+      "scoreUnit": "ops/ms",
+      "rawData": [
+        [
+          91143.32349403398,
+          89961.47177177764,
+          89252.87012530357,
+          87459.57680346422,
+          89425.0547917707
+        ]
+      ]
+    },
+    "secondaryMetrics": {}
+  },
+  {
+    "jmhVersion": "1.35",
+    "params": {
+      "tool": "AtomicLong_counter",
+      "metric": "all"
+    },
+    "mode": "thrpt",
+    "threads": 16,
+    "benchmark": "r1w15",
+    "forks": 1,
+    "jvm": "/usr/lib/jvm/java-11-openjdk-amd64/bin/java",
+    "jvmArgs": [
+      "-javaagent:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/lib/idea_rt.jar=34811:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin",
+      "-Dfile.encoding=UTF-8"
+    ],
+    "jdkVersion": "11.0.21",
+    "vmName": "OpenJDK 64-Bit Server VM",
+    "vmVersion": "11.0.21+9-post-Ubuntu-0ubuntu122.04",
+    "warmupIterations": 5,
+    "warmupTime": "10 s",
+    "warmupBatchSize": 1,
+    "measurementIterations": 5,
+    "measurementTime": "10 s",
+    "measurementBatchSize": 1,
+    "primaryMetric": {
+      "score": 84069.65620456407,
+      "scoreError": 5735.873838412758,
+      "scoreConfidence": [
+        78333.78236615131,
+        89805.53004297684
+      ],
+      "scorePercentiles": {
+        "0.0": 81417.90490077995,
+        "50.0": 84689.41176763544,
+        "90.0": 84941.70033540527,
+        "95.0": 84941.70033540527,
+        "99.0": 84941.70033540527,
+        "99.9": 84941.70033540527,
+        "99.99": 84941.70033540527,
+        "99.999": 84941.70033540527,
+        "99.9999": 84941.70033540527,
+        "100.0": 84941.70033540527
+      },
+      "scoreUnit": "ops/ms",
+      "rawData": [
+        [
+          84941.70033540527,
+          84534.72878890883,
+          84689.41176763544,
+          84764.53523009087,
+          81417.90490077995
+        ]
+      ]
+    },
+    "secondaryMetrics": {}
+  },
+  {
+    "jmhVersion": "1.35",
+    "params": {
+      "tool": "AtomicLong_counter",
+      "metric": "read"
+    },
+    "mode": "thrpt",
+    "threads": 4,
+    "benchmark": "r1w3",
+    "forks": 1,
+    "jvm": "/usr/lib/jvm/java-11-openjdk-amd64/bin/java",
+    "jvmArgs": [
+      "-javaagent:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/lib/idea_rt.jar=36203:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin",
+      "-Dfile.encoding=UTF-8"
+    ],
+    "jdkVersion": "11.0.21",
+    "vmName": "OpenJDK 64-Bit Server VM",
+    "vmVersion": "11.0.21+9-post-Ubuntu-0ubuntu122.04",
+    "warmupIterations": 5,
+    "warmupTime": "10 s",
+    "warmupBatchSize": 1,
+    "measurementIterations": 5,
+    "measurementTime": "10 s",
+    "measurementBatchSize": 1,
+    "primaryMetric": {
+      "score": 75981.75000127152,
+      "scoreError": 36557.62123799672,
+      "scoreConfidence": [
+        39424.1287632748,
+        112539.37123926824
+      ],
+      "scorePercentiles": {
+        "0.0": 70115.99164296048,
+        "50.0": 70960.38666490222,
+        "90.0": 92506.25510110398,
+        "95.0": 92506.25510110398,
+        "99.0": 92506.25510110398,
+        "99.9": 92506.25510110398,
+        "99.99": 92506.25510110398,
+        "99.999": 92506.25510110398,
+        "99.9999": 92506.25510110398,
+        "100.0": 92506.25510110398
+      },
+      "scoreUnit": "ops/ms",
+      "rawData": [
+        [
+          70717.05316671767,
+          70960.38666490222,
+          70115.99164296048,
+          75609.06343067328,
+          92506.25510110398
+        ]
+      ]
+    },
+    "secondaryMetrics": {}
+  },
+  {
+    "jmhVersion": "1.35",
+    "params": {
+      "tool": "AtomicLong_counter",
+      "metric": "read"
+    },
+    "mode": "thrpt",
+    "threads": 8,
+    "benchmark": "r1w7",
+    "forks": 1,
+    "jvm": "/usr/lib/jvm/java-11-openjdk-amd64/bin/java",
+    "jvmArgs": [
+      "-javaagent:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/lib/idea_rt.jar=36959:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin",
+      "-Dfile.encoding=UTF-8"
+    ],
+    "jdkVersion": "11.0.21",
+    "vmName": "OpenJDK 64-Bit Server VM",
+    "vmVersion": "11.0.21+9-post-Ubuntu-0ubuntu122.04",
+    "warmupIterations": 5,
+    "warmupTime": "10 s",
+    "warmupBatchSize": 1,
+    "measurementIterations": 5,
+    "measurementTime": "10 s",
+    "measurementBatchSize": 1,
+    "primaryMetric": {
+      "score": 16517.096030417404,
+      "scoreError": 3762.897282079621,
+      "scoreConfidence": [
+        12754.198748337783,
+        20279.993312497027
+      ],
+      "scorePercentiles": {
+        "0.0": 14994.408238210146,
+        "50.0": 17080.79432037754,
+        "90.0": 17333.815518736978,
+        "95.0": 17333.815518736978,
+        "99.0": 17333.815518736978,
+        "99.9": 17333.815518736978,
+        "99.99": 17333.815518736978,
+        "99.999": 17333.815518736978,
+        "99.9999": 17333.815518736978,
+        "100.0": 17333.815518736978
+      },
+      "scoreUnit": "ops/ms",
+      "rawData": [
+        [
+          17091.367155195225,
+          17333.815518736978,
+          14994.408238210146,
+          16085.094919567135,
+          17080.79432037754
+        ]
+      ]
+    },
+    "secondaryMetrics": {}
+  },
+  {
+    "jmhVersion": "1.35",
+    "params": {
+      "tool": "AtomicLong_counter",
+      "metric": "read"
+    },
+    "mode": "thrpt",
+    "threads": 16,
+    "benchmark": "r1w15",
+    "forks": 1,
+    "jvm": "/usr/lib/jvm/java-11-openjdk-amd64/bin/java",
+    "jvmArgs": [
+      "-javaagent:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/lib/idea_rt.jar=34811:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin",
+      "-Dfile.encoding=UTF-8"
+    ],
+    "jdkVersion": "11.0.21",
+    "vmName": "OpenJDK 64-Bit Server VM",
+    "vmVersion": "11.0.21+9-post-Ubuntu-0ubuntu122.04",
+    "warmupIterations": 5,
+    "warmupTime": "10 s",
+    "warmupBatchSize": 1,
+    "measurementIterations": 5,
+    "measurementTime": "10 s",
+    "measurementBatchSize": 1,
+    "primaryMetric": {
+      "score": 6278.914026335767,
+      "scoreError": 1527.5688232271905,
+      "scoreConfidence": [
+        4751.345203108576,
+        7806.482849562957
+      ],
+      "scorePercentiles": {
+        "0.0": 5646.816567030225,
+        "50.0": 6486.700923217558,
+        "90.0": 6601.389366151204,
+        "95.0": 6601.389366151204,
+        "99.0": 6601.389366151204,
+        "99.9": 6601.389366151204,
+        "99.99": 6601.389366151204,
+        "99.999": 6601.389366151204,
+        "99.9999": 6601.389366151204,
+        "100.0": 6601.389366151204
+      },
+      "scoreUnit": "ops/ms",
+      "rawData": [
+        [
+          6486.700923217558,
+          5646.816567030225,
+          6526.809507080827,
+          6601.389366151204,
+          6132.85376819902
+        ]
+      ]
+    },
+    "secondaryMetrics": {}
+  },
+  {
+    "jmhVersion": "1.35",
+    "params": {
+      "tool": "AtomicLong_counter",
+      "metric": "write"
+    },
+    "mode": "thrpt",
+    "threads": 4,
+    "benchmark": "r1w3",
+    "forks": 1,
+    "jvm": "/usr/lib/jvm/java-11-openjdk-amd64/bin/java",
+    "jvmArgs": [
+      "-javaagent:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/lib/idea_rt.jar=36203:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin",
+      "-Dfile.encoding=UTF-8"
+    ],
+    "jdkVersion": "11.0.21",
+    "vmName": "OpenJDK 64-Bit Server VM",
+    "vmVersion": "11.0.21+9-post-Ubuntu-0ubuntu122.04",
+    "warmupIterations": 5,
+    "warmupTime": "10 s",
+    "warmupBatchSize": 1,
+    "measurementIterations": 5,
+    "measurementTime": "10 s",
+    "measurementBatchSize": 1,
+    "primaryMetric": {
+      "score": 46948.122858562136,
+      "scoreError": 10141.187490242619,
+      "scoreConfidence": [
+        36806.935368319515,
+        57089.310348804756
+      ],
+      "scorePercentiles": {
+        "0.0": 42364.043013123955,
+        "50.0": 48382.98044764687,
+        "90.0": 48484.54067648726,
+        "95.0": 48484.54067648726,
+        "99.0": 48484.54067648726,
+        "99.9": 48484.54067648726,
+        "99.99": 48484.54067648726,
+        "99.999": 48484.54067648726,
+        "99.9999": 48484.54067648726,
+        "100.0": 48484.54067648726
+      },
+      "scoreUnit": "ops/ms",
+      "rawData": [
+        [
+          48382.98044764687,
+          48465.28628706184,
+          48484.54067648726,
+          47043.76386849074,
+          42364.043013123955
+        ]
+      ]
+    },
+    "secondaryMetrics": {}
+  },
+  {
+    "jmhVersion": "1.35",
+    "params": {
+      "tool": "AtomicLong_counter",
+      "metric": "write"
+    },
+    "mode": "thrpt",
+    "threads": 8,
+    "benchmark": "r1w7",
+    "forks": 1,
+    "jvm": "/usr/lib/jvm/java-11-openjdk-amd64/bin/java",
+    "jvmArgs": [
+      "-javaagent:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/lib/idea_rt.jar=36959:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin",
+      "-Dfile.encoding=UTF-8"
+    ],
+    "jdkVersion": "11.0.21",
+    "vmName": "OpenJDK 64-Bit Server VM",
+    "vmVersion": "11.0.21+9-post-Ubuntu-0ubuntu122.04",
+    "warmupIterations": 5,
+    "warmupTime": "10 s",
+    "warmupBatchSize": 1,
+    "measurementIterations": 5,
+    "measurementTime": "10 s",
+    "measurementBatchSize": 1,
+    "primaryMetric": {
+      "score": 72931.3633668526,
+      "scoreError": 4667.7551381361145,
+      "scoreConfidence": [
+        68263.60822871649,
+        77599.11850498871
+      ],
+      "scorePercentiles": {
+        "0.0": 71374.48188389708,
+        "50.0": 72627.65625304065,
+        "90.0": 74258.4618870934,
+        "95.0": 74258.4618870934,
+        "99.0": 74258.4618870934,
+        "99.9": 74258.4618870934,
+        "99.99": 74258.4618870934,
+        "99.999": 74258.4618870934,
+        "99.9999": 74258.4618870934,
+        "100.0": 74258.4618870934
+      },
+      "scoreUnit": "ops/ms",
+      "rawData": [
+        [
+          74051.95633883875,
+          72627.65625304065,
+          74258.4618870934,
+          71374.48188389708,
+          72344.26047139317
+        ]
+      ]
+    },
+    "secondaryMetrics": {}
+  },
+  {
+    "jmhVersion": "1.35",
+    "params": {
+      "tool": "AtomicLong_counter",
+      "metric": "write"
+    },
+    "mode": "thrpt",
+    "threads": 16,
+    "benchmark": "r1w15",
+    "forks": 1,
+    "jvm": "/usr/lib/jvm/java-11-openjdk-amd64/bin/java",
+    "jvmArgs": [
+      "-javaagent:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/lib/idea_rt.jar=34811:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin",
+      "-Dfile.encoding=UTF-8"
+    ],
+    "jdkVersion": "11.0.21",
+    "vmName": "OpenJDK 64-Bit Server VM",
+    "vmVersion": "11.0.21+9-post-Ubuntu-0ubuntu122.04",
+    "warmupIterations": 5,
+    "warmupTime": "10 s",
+    "warmupBatchSize": 1,
+    "measurementIterations": 5,
+    "measurementTime": "10 s",
+    "measurementBatchSize": 1,
+    "primaryMetric": {
+      "score": 77790.7421782283,
+      "scoreError": 5513.441686831916,
+      "scoreConfidence": [
+        72277.3004913964,
+        83304.18386506021
+      ],
+      "scorePercentiles": {
+        "0.0": 75285.05113258092,
+        "50.0": 78163.14586393967,
+        "90.0": 78887.91222187862,
+        "95.0": 78887.91222187862,
+        "99.0": 78887.91222187862,
+        "99.9": 78887.91222187862,
+        "99.99": 78887.91222187862,
+        "99.999": 78887.91222187862,
+        "99.9999": 78887.91222187862,
+        "100.0": 78887.91222187862
+      },
+      "scoreUnit": "ops/ms",
+      "rawData": [
+        [
+          78454.99941218771,
+          78887.91222187862,
+          78162.6022605546,
+          78163.14586393967,
+          75285.05113258092
+        ]
+      ]
+    },
+    "secondaryMetrics": {}
+  },
+  {
+    "jmhVersion": "1.35",
+    "params": {
+      "tool": "LongAdder_counter",
+      "metric": "all"
+    },
+    "mode": "thrpt",
+    "threads": 4,
+    "benchmark": "r1w3",
+    "forks": 1,
+    "jvm": "/usr/lib/jvm/java-11-openjdk-amd64/bin/java",
+    "jvmArgs": [
+      "-javaagent:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/lib/idea_rt.jar=36203:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin",
+      "-Dfile.encoding=UTF-8"
+    ],
+    "jdkVersion": "11.0.21",
+    "vmName": "OpenJDK 64-Bit Server VM",
+    "vmVersion": "11.0.21+9-post-Ubuntu-0ubuntu122.04",
+    "warmupIterations": 5,
+    "warmupTime": "10 s",
+    "warmupBatchSize": 1,
+    "measurementIterations": 5,
+    "measurementTime": "10 s",
+    "measurementBatchSize": 1,
+    "primaryMetric": {
+      "score": 100269.61174661801,
+      "scoreError": 11677.954546259116,
+      "scoreConfidence": [
+        88591.6572003589,
+        111947.56629287713
+      ],
+      "scorePercentiles": {
+        "0.0": 94915.08135975576,
+        "50.0": 101238.04875309089,
+        "90.0": 102186.10616772492,
+        "95.0": 102186.10616772492,
+        "99.0": 102186.10616772492,
+        "99.9": 102186.10616772492,
+        "99.99": 102186.10616772492,
+        "99.999": 102186.10616772492,
+        "99.9999": 102186.10616772492,
+        "100.0": 102186.10616772492
+      },
+      "scoreUnit": "ops/ms",
+      "rawData": [
+        [
+          102186.10616772492,
+          101238.04875309089,
+          101025.62463789599,
+          94915.08135975576,
+          101983.19781462249
+        ]
+      ]
+    },
+    "secondaryMetrics": {}
+  },
+  {
+    "jmhVersion": "1.35",
+    "params": {
+      "tool": "LongAdder_counter",
+      "metric": "all"
+    },
+    "mode": "thrpt",
+    "threads": 8,
+    "benchmark": "r1w7",
+    "forks": 1,
+    "jvm": "/usr/lib/jvm/java-11-openjdk-amd64/bin/java",
+    "jvmArgs": [
+      "-javaagent:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/lib/idea_rt.jar=36959:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin",
+      "-Dfile.encoding=UTF-8"
+    ],
+    "jdkVersion": "11.0.21",
+    "vmName": "OpenJDK 64-Bit Server VM",
+    "vmVersion": "11.0.21+9-post-Ubuntu-0ubuntu122.04",
+    "warmupIterations": 5,
+    "warmupTime": "10 s",
+    "warmupBatchSize": 1,
+    "measurementIterations": 5,
+    "measurementTime": "10 s",
+    "measurementBatchSize": 1,
+    "primaryMetric": {
+      "score": 184046.38209818202,
+      "scoreError": 9267.94003679452,
+      "scoreConfidence": [
+        174778.4420613875,
+        193314.32213497654
+      ],
+      "scorePercentiles": {
+        "0.0": 180513.44177130057,
+        "50.0": 185229.74274158885,
+        "90.0": 186130.44468326555,
+        "95.0": 186130.44468326555,
+        "99.0": 186130.44468326555,
+        "99.9": 186130.44468326555,
+        "99.99": 186130.44468326555,
+        "99.999": 186130.44468326555,
+        "99.9999": 186130.44468326555,
+        "100.0": 186130.44468326555
+      },
+      "scoreUnit": "ops/ms",
+      "rawData": [
+        [
+          180513.44177130057,
+          185229.74274158885,
+          185746.1792389911,
+          186130.44468326555,
+          182612.102055764
+        ]
+      ]
+    },
+    "secondaryMetrics": {}
+  },
+  {
+    "jmhVersion": "1.35",
+    "params": {
+      "tool": "LongAdder_counter",
+      "metric": "all"
+    },
+    "mode": "thrpt",
+    "threads": 16,
+    "benchmark": "r1w15",
+    "forks": 1,
+    "jvm": "/usr/lib/jvm/java-11-openjdk-amd64/bin/java",
+    "jvmArgs": [
+      "-javaagent:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/lib/idea_rt.jar=34811:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin",
+      "-Dfile.encoding=UTF-8"
+    ],
+    "jdkVersion": "11.0.21",
+    "vmName": "OpenJDK 64-Bit Server VM",
+    "vmVersion": "11.0.21+9-post-Ubuntu-0ubuntu122.04",
+    "warmupIterations": 5,
+    "warmupTime": "10 s",
+    "warmupBatchSize": 1,
+    "measurementIterations": 5,
+    "measurementTime": "10 s",
+    "measurementBatchSize": 1,
+    "primaryMetric": {
+      "score": 428645.2788261144,
+      "scoreError": 5181.561249832678,
+      "scoreConfidence": [
+        423463.7175762817,
+        433826.84007594705
+      ],
+      "scorePercentiles": {
+        "0.0": 427001.7492446387,
+        "50.0": 428548.4806921546,
+        "90.0": 430423.244685664,
+        "95.0": 430423.244685664,
+        "99.0": 430423.244685664,
+        "99.9": 430423.244685664,
+        "99.99": 430423.244685664,
+        "99.999": 430423.244685664,
+        "99.9999": 430423.244685664,
+        "100.0": 430423.244685664
+      },
+      "scoreUnit": "ops/ms",
+      "rawData": [
+        [
+          429454.25923339726,
+          427798.66027471697,
+          428548.4806921546,
+          430423.244685664,
+          427001.7492446387
+        ]
+      ]
+    },
+    "secondaryMetrics": {}
+  },
+  {
+    "jmhVersion": "1.35",
+    "params": {
+      "tool": "LongAdder_counter",
+      "metric": "read"
+    },
+    "mode": "thrpt",
+    "threads": 4,
+    "benchmark": "r1w3",
+    "forks": 1,
+    "jvm": "/usr/lib/jvm/java-11-openjdk-amd64/bin/java",
+    "jvmArgs": [
+      "-javaagent:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/lib/idea_rt.jar=36203:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin",
+      "-Dfile.encoding=UTF-8"
+    ],
+    "jdkVersion": "11.0.21",
+    "vmName": "OpenJDK 64-Bit Server VM",
+    "vmVersion": "11.0.21+9-post-Ubuntu-0ubuntu122.04",
+    "warmupIterations": 5,
+    "warmupTime": "10 s",
+    "warmupBatchSize": 1,
+    "measurementIterations": 5,
+    "measurementTime": "10 s",
+    "measurementBatchSize": 1,
+    "primaryMetric": {
+      "score": 18887.521239010603,
+      "scoreError": 2763.440992727083,
+      "scoreConfidence": [
+        16124.08024628352,
+        21650.962231737685
+      ],
+      "scorePercentiles": {
+        "0.0": 18171.818898527505,
+        "50.0": 18900.4439019416,
+        "90.0": 19904.18984481691,
+        "95.0": 19904.18984481691,
+        "99.0": 19904.18984481691,
+        "99.9": 19904.18984481691,
+        "99.99": 19904.18984481691,
+        "99.999": 19904.18984481691,
+        "99.9999": 19904.18984481691,
+        "100.0": 19904.18984481691
+      },
+      "scoreUnit": "ops/ms",
+      "rawData": [
+        [
+          19212.681742230623,
+          18171.818898527505,
+          18900.4439019416,
+          19904.18984481691,
+          18248.471807536378
+        ]
+      ]
+    },
+    "secondaryMetrics": {}
+  },
+  {
+    "jmhVersion": "1.35",
+    "params": {
+      "tool": "LongAdder_counter",
+      "metric": "read"
+    },
+    "mode": "thrpt",
+    "threads": 8,
+    "benchmark": "r1w7",
+    "forks": 1,
+    "jvm": "/usr/lib/jvm/java-11-openjdk-amd64/bin/java",
+    "jvmArgs": [
+      "-javaagent:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/lib/idea_rt.jar=36959:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin",
+      "-Dfile.encoding=UTF-8"
+    ],
+    "jdkVersion": "11.0.21",
+    "vmName": "OpenJDK 64-Bit Server VM",
+    "vmVersion": "11.0.21+9-post-Ubuntu-0ubuntu122.04",
+    "warmupIterations": 5,
+    "warmupTime": "10 s",
+    "warmupBatchSize": 1,
+    "measurementIterations": 5,
+    "measurementTime": "10 s",
+    "measurementBatchSize": 1,
+    "primaryMetric": {
+      "score": 6329.761813096607,
+      "scoreError": 1257.3961824862179,
+      "scoreConfidence": [
+        5072.3656306103885,
+        7587.157995582825
+      ],
+      "scorePercentiles": {
+        "0.0": 5782.4647566506455,
+        "50.0": 6529.439903351117,
+        "90.0": 6535.47640049455,
+        "95.0": 6535.47640049455,
+        "99.0": 6535.47640049455,
+        "99.9": 6535.47640049455,
+        "99.99": 6535.47640049455,
+        "99.999": 6535.47640049455,
+        "99.9999": 6535.47640049455,
+        "100.0": 6535.47640049455
+      },
+      "scoreUnit": "ops/ms",
+      "rawData": [
+        [
+          6268.945547549227,
+          6532.482457437494,
+          6535.47640049455,
+          6529.439903351117,
+          5782.4647566506455
+        ]
+      ]
+    },
+    "secondaryMetrics": {}
+  },
+  {
+    "jmhVersion": "1.35",
+    "params": {
+      "tool": "LongAdder_counter",
+      "metric": "read"
+    },
+    "mode": "thrpt",
+    "threads": 16,
+    "benchmark": "r1w15",
+    "forks": 1,
+    "jvm": "/usr/lib/jvm/java-11-openjdk-amd64/bin/java",
+    "jvmArgs": [
+      "-javaagent:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/lib/idea_rt.jar=34811:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin",
+      "-Dfile.encoding=UTF-8"
+    ],
+    "jdkVersion": "11.0.21",
+    "vmName": "OpenJDK 64-Bit Server VM",
+    "vmVersion": "11.0.21+9-post-Ubuntu-0ubuntu122.04",
+    "warmupIterations": 5,
+    "warmupTime": "10 s",
+    "warmupBatchSize": 1,
+    "measurementIterations": 5,
+    "measurementTime": "10 s",
+    "measurementBatchSize": 1,
+    "primaryMetric": {
+      "score": 3290.302045149653,
+      "scoreError": 197.395859478743,
+      "scoreConfidence": [
+        3092.90618567091,
+        3487.6979046283964
+      ],
+      "scorePercentiles": {
+        "0.0": 3231.775262412029,
+        "50.0": 3287.7424511556637,
+        "90.0": 3367.786836879737,
+        "95.0": 3367.786836879737,
+        "99.0": 3367.786836879737,
+        "99.9": 3367.786836879737,
+        "99.99": 3367.786836879737,
+        "99.999": 3367.786836879737,
+        "99.9999": 3367.786836879737,
+        "100.0": 3367.786836879737
+      },
+      "scoreUnit": "ops/ms",
+      "rawData": [
+        [
+          3287.7424511556637,
+          3303.797650700796,
+          3231.775262412029,
+          3260.408024600037,
+          3367.786836879737
+        ]
+      ]
+    },
+    "secondaryMetrics": {}
+  },
+  {
+    "jmhVersion": "1.35",
+    "params": {
+      "tool": "LongAdder_counter",
+      "metric": "write"
+    },
+    "mode": "thrpt",
+    "threads": 4,
+    "benchmark": "r1w3",
+    "forks": 1,
+    "jvm": "/usr/lib/jvm/java-11-openjdk-amd64/bin/java",
+    "jvmArgs": [
+      "-javaagent:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/lib/idea_rt.jar=36203:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin",
+      "-Dfile.encoding=UTF-8"
+    ],
+    "jdkVersion": "11.0.21",
+    "vmName": "OpenJDK 64-Bit Server VM",
+    "vmVersion": "11.0.21+9-post-Ubuntu-0ubuntu122.04",
+    "warmupIterations": 5,
+    "warmupTime": "10 s",
+    "warmupBatchSize": 1,
+    "measurementIterations": 5,
+    "measurementTime": "10 s",
+    "measurementBatchSize": 1,
+    "primaryMetric": {
+      "score": 81382.09050760741,
+      "scoreError": 13890.090162546518,
+      "scoreConfidence": [
+        67492.0003450609,
+        95272.18067015393
+      ],
+      "scorePercentiles": {
+        "0.0": 75010.89151493885,
+        "50.0": 82973.4244254943,
+        "90.0": 83734.72600708611,
+        "95.0": 83734.72600708611,
+        "99.0": 83734.72600708611,
+        "99.9": 83734.72600708611,
+        "99.99": 83734.72600708611,
+        "99.999": 83734.72600708611,
+        "99.9999": 83734.72600708611,
+        "100.0": 83734.72600708611
+      },
+      "scoreUnit": "ops/ms",
+      "rawData": [
+        [
+          82973.4244254943,
+          83066.22985456338,
+          82125.1807359544,
+          75010.89151493885,
+          83734.72600708611
+        ]
+      ]
+    },
+    "secondaryMetrics": {}
+  },
+  {
+    "jmhVersion": "1.35",
+    "params": {
+      "tool": "LongAdder_counter",
+      "metric": "write"
+    },
+    "mode": "thrpt",
+    "threads": 8,
+    "benchmark": "r1w7",
+    "forks": 1,
+    "jvm": "/usr/lib/jvm/java-11-openjdk-amd64/bin/java",
+    "jvmArgs": [
+      "-javaagent:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/lib/idea_rt.jar=36959:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin",
+      "-Dfile.encoding=UTF-8"
+    ],
+    "jdkVersion": "11.0.21",
+    "vmName": "OpenJDK 64-Bit Server VM",
+    "vmVersion": "11.0.21+9-post-Ubuntu-0ubuntu122.04",
+    "warmupIterations": 5,
+    "warmupTime": "10 s",
+    "warmupBatchSize": 1,
+    "measurementIterations": 5,
+    "measurementTime": "10 s",
+    "measurementBatchSize": 1,
+    "primaryMetric": {
+      "score": 177716.6202850854,
+      "scoreError": 8520.985779093631,
+      "scoreConfidence": [
+        169195.63450599177,
+        186237.60606417904
+      ],
+      "scorePercentiles": {
+        "0.0": 174244.49622375134,
+        "50.0": 178697.26028415136,
+        "90.0": 179601.00477991442,
+        "95.0": 179601.00477991442,
+        "99.0": 179601.00477991442,
+        "99.9": 179601.00477991442,
+        "99.99": 179601.00477991442,
+        "99.999": 179601.00477991442,
+        "99.9999": 179601.00477991442,
+        "100.0": 179601.00477991442
+      },
+      "scoreUnit": "ops/ms",
+      "rawData": [
+        [
+          174244.49622375134,
+          178697.26028415136,
+          179210.70283849657,
+          179601.00477991442,
+          176829.63729911335
+        ]
+      ]
+    },
+    "secondaryMetrics": {}
+  },
+  {
+    "jmhVersion": "1.35",
+    "params": {
+      "tool": "LongAdder_counter",
+      "metric": "write"
+    },
+    "mode": "thrpt",
+    "threads": 16,
+    "benchmark": "r1w15",
+    "forks": 1,
+    "jvm": "/usr/lib/jvm/java-11-openjdk-amd64/bin/java",
+    "jvmArgs": [
+      "-javaagent:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/lib/idea_rt.jar=34811:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin",
+      "-Dfile.encoding=UTF-8"
+    ],
+    "jdkVersion": "11.0.21",
+    "vmName": "OpenJDK 64-Bit Server VM",
+    "vmVersion": "11.0.21+9-post-Ubuntu-0ubuntu122.04",
+    "warmupIterations": 5,
+    "warmupTime": "10 s",
+    "warmupBatchSize": 1,
+    "measurementIterations": 5,
+    "measurementTime": "10 s",
+    "measurementBatchSize": 1,
+    "primaryMetric": {
+      "score": 425354.9767809647,
+      "scoreError": 5318.248821017419,
+      "scoreConfidence": [
+        420036.7279599473,
+        430673.2256019821
+      ],
+      "scorePercentiles": {
+        "0.0": 423633.962407759,
+        "50.0": 425316.7054297426,
+        "90.0": 427162.836661064,
+        "95.0": 427162.836661064,
+        "99.0": 427162.836661064,
+        "99.9": 427162.836661064,
+        "99.99": 427162.836661064,
+        "99.999": 427162.836661064,
+        "99.9999": 427162.836661064,
+        "100.0": 427162.836661064
+      },
+      "scoreUnit": "ops/ms",
+      "rawData": [
+        [
+          426166.5167822416,
+          424494.8626240162,
+          425316.7054297426,
+          427162.836661064,
+          423633.962407759
+        ]
+      ]
+    },
+    "secondaryMetrics": {}
+  },
+  {
+    "jmhVersion": "1.35",
+    "params": {
+      "tool": "volatile_synchronized",
+      "metric": "all"
+    },
+    "mode": "thrpt",
+    "threads": 4,
+    "benchmark": "r1w3",
+    "forks": 1,
+    "jvm": "/usr/lib/jvm/java-11-openjdk-amd64/bin/java",
+    "jvmArgs": [
+      "-javaagent:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/lib/idea_rt.jar=36203:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin",
+      "-Dfile.encoding=UTF-8"
+    ],
+    "jdkVersion": "11.0.21",
+    "vmName": "OpenJDK 64-Bit Server VM",
+    "vmVersion": "11.0.21+9-post-Ubuntu-0ubuntu122.04",
+    "warmupIterations": 5,
+    "warmupTime": "10 s",
+    "warmupBatchSize": 1,
+    "measurementIterations": 5,
+    "measurementTime": "10 s",
+    "measurementBatchSize": 1,
+    "primaryMetric": {
+      "score": 258978.4781392371,
+      "scoreError": 25238.861227629346,
+      "scoreConfidence": [
+        233739.61691160774,
+        284217.33936686645
+      ],
+      "scorePercentiles": {
+        "0.0": 250148.38729132275,
+        "50.0": 257855.76338976197,
+        "90.0": 267887.4370823989,
+        "95.0": 267887.4370823989,
+        "99.0": 267887.4370823989,
+        "99.9": 267887.4370823989,
+        "99.99": 267887.4370823989,
+        "99.999": 267887.4370823989,
+        "99.9999": 267887.4370823989,
+        "100.0": 267887.4370823989
+      },
+      "scoreUnit": "ops/ms",
+      "rawData": [
+        [
+          250148.38729132275,
+          257855.76338976197,
+          262020.12563384464,
+          267887.4370823989,
+          256980.67729885722
+        ]
+      ]
+    },
+    "secondaryMetrics": {}
+  },
+  {
+    "jmhVersion": "1.35",
+    "params": {
+      "tool": "volatile_synchronized",
+      "metric": "all"
+    },
+    "mode": "thrpt",
+    "threads": 8,
+    "benchmark": "r1w7",
+    "forks": 1,
+    "jvm": "/usr/lib/jvm/java-11-openjdk-amd64/bin/java",
+    "jvmArgs": [
+      "-javaagent:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/lib/idea_rt.jar=36959:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin",
+      "-Dfile.encoding=UTF-8"
+    ],
+    "jdkVersion": "11.0.21",
+    "vmName": "OpenJDK 64-Bit Server VM",
+    "vmVersion": "11.0.21+9-post-Ubuntu-0ubuntu122.04",
+    "warmupIterations": 5,
+    "warmupTime": "10 s",
+    "warmupBatchSize": 1,
+    "measurementIterations": 5,
+    "measurementTime": "10 s",
+    "measurementBatchSize": 1,
+    "primaryMetric": {
+      "score": 234576.99431684666,
+      "scoreError": 13569.453687269115,
+      "scoreConfidence": [
+        221007.54062957753,
+        248146.44800411578
+      ],
+      "scorePercentiles": {
+        "0.0": 231198.9228769805,
+        "50.0": 234072.9699828524,
+        "90.0": 239306.18659672604,
+        "95.0": 239306.18659672604,
+        "99.0": 239306.18659672604,
+        "99.9": 239306.18659672604,
+        "99.99": 239306.18659672604,
+        "99.999": 239306.18659672604,
+        "99.9999": 239306.18659672604,
+        "100.0": 239306.18659672604
+      },
+      "scoreUnit": "ops/ms",
+      "rawData": [
+        [
+          231198.9228769805,
+          231389.095047298,
+          234072.9699828524,
+          236917.79708037624,
+          239306.18659672604
+        ]
+      ]
+    },
+    "secondaryMetrics": {}
+  },
+  {
+    "jmhVersion": "1.35",
+    "params": {
+      "tool": "volatile_synchronized",
+      "metric": "all"
+    },
+    "mode": "thrpt",
+    "threads": 16,
+    "benchmark": "r1w15",
+    "forks": 1,
+    "jvm": "/usr/lib/jvm/java-11-openjdk-amd64/bin/java",
+    "jvmArgs": [
+      "-javaagent:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/lib/idea_rt.jar=34811:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin",
+      "-Dfile.encoding=UTF-8"
+    ],
+    "jdkVersion": "11.0.21",
+    "vmName": "OpenJDK 64-Bit Server VM",
+    "vmVersion": "11.0.21+9-post-Ubuntu-0ubuntu122.04",
+    "warmupIterations": 5,
+    "warmupTime": "10 s",
+    "warmupBatchSize": 1,
+    "measurementIterations": 5,
+    "measurementTime": "10 s",
+    "measurementBatchSize": 1,
+    "primaryMetric": {
+      "score": 259572.77071480843,
+      "scoreError": 2420.4845362623037,
+      "scoreConfidence": [
+        257152.2861785461,
+        261993.25525107075
+      ],
+      "scorePercentiles": {
+        "0.0": 258901.6060062748,
+        "50.0": 259786.35693178937,
+        "90.0": 260186.68326559165,
+        "95.0": 260186.68326559165,
+        "99.0": 260186.68326559165,
+        "99.9": 260186.68326559165,
+        "99.99": 260186.68326559165,
+        "99.999": 260186.68326559165,
+        "99.9999": 260186.68326559165,
+        "100.0": 260186.68326559165
+      },
+      "scoreUnit": "ops/ms",
+      "rawData": [
+        [
+          260084.23171388096,
+          260186.68326559165,
+          258901.6060062748,
+          259786.35693178937,
+          258904.97565650535
+        ]
+      ]
+    },
+    "secondaryMetrics": {}
+  },
+  {
+    "jmhVersion": "1.35",
+    "params": {
+      "tool": "volatile_synchronized",
+      "metric": "read"
+    },
+    "mode": "thrpt",
+    "threads": 4,
+    "benchmark": "r1w3",
+    "forks": 1,
+    "jvm": "/usr/lib/jvm/java-11-openjdk-amd64/bin/java",
+    "jvmArgs": [
+      "-javaagent:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/lib/idea_rt.jar=36203:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin",
+      "-Dfile.encoding=UTF-8"
+    ],
+    "jdkVersion": "11.0.21",
+    "vmName": "OpenJDK 64-Bit Server VM",
+    "vmVersion": "11.0.21+9-post-Ubuntu-0ubuntu122.04",
+    "warmupIterations": 5,
+    "warmupTime": "10 s",
+    "warmupBatchSize": 1,
+    "measurementIterations": 5,
+    "measurementTime": "10 s",
+    "measurementBatchSize": 1,
+    "primaryMetric": {
+      "score": 249126.97237079838,
+      "scoreError": 25347.076997569784,
+      "scoreConfidence": [
+        223779.8953732286,
+        274474.04936836817
+      ],
+      "scorePercentiles": {
+        "0.0": 240238.93435826502,
+        "50.0": 247997.70261376805,
+        "90.0": 258072.17505901758,
+        "95.0": 258072.17505901758,
+        "99.0": 258072.17505901758,
+        "99.9": 258072.17505901758,
+        "99.99": 258072.17505901758,
+        "99.999": 258072.17505901758,
+        "99.9999": 258072.17505901758,
+        "100.0": 258072.17505901758
+      },
+      "scoreUnit": "ops/ms",
+      "rawData": [
+        [
+          240238.93435826502,
+          247997.70261376805,
+          252158.65277446638,
+          258072.17505901758,
+          247167.3970484749
+        ]
+      ]
+    },
+    "secondaryMetrics": {}
+  },
+  {
+    "jmhVersion": "1.35",
+    "params": {
+      "tool": "volatile_synchronized",
+      "metric": "read"
+    },
+    "mode": "thrpt",
+    "threads": 8,
+    "benchmark": "r1w7",
+    "forks": 1,
+    "jvm": "/usr/lib/jvm/java-11-openjdk-amd64/bin/java",
+    "jvmArgs": [
+      "-javaagent:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/lib/idea_rt.jar=36959:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin",
+      "-Dfile.encoding=UTF-8"
+    ],
+    "jdkVersion": "11.0.21",
+    "vmName": "OpenJDK 64-Bit Server VM",
+    "vmVersion": "11.0.21+9-post-Ubuntu-0ubuntu122.04",
+    "warmupIterations": 5,
+    "warmupTime": "10 s",
+    "warmupBatchSize": 1,
+    "measurementIterations": 5,
+    "measurementTime": "10 s",
+    "measurementBatchSize": 1,
+    "primaryMetric": {
+      "score": 226823.23577790888,
+      "scoreError": 14323.293455058243,
+      "scoreConfidence": [
+        212499.94232285063,
+        241146.52923296712
+      ],
+      "scorePercentiles": {
+        "0.0": 223130.69188190455,
+        "50.0": 226449.3359804308,
+        "90.0": 231653.04381659074,
+        "95.0": 231653.04381659074,
+        "99.0": 231653.04381659074,
+        "99.9": 231653.04381659074,
+        "99.99": 231653.04381659074,
+        "99.999": 231653.04381659074,
+        "99.9999": 231653.04381659074,
+        "100.0": 231653.04381659074
+      },
+      "scoreUnit": "ops/ms",
+      "rawData": [
+        [
+          223130.69188190455,
+          223445.5567748506,
+          226449.3359804308,
+          229437.55043576774,
+          231653.04381659074
+        ]
+      ]
+    },
+    "secondaryMetrics": {}
+  },
+  {
+    "jmhVersion": "1.35",
+    "params": {
+      "tool": "volatile_synchronized",
+      "metric": "read"
+    },
+    "mode": "thrpt",
+    "threads": 16,
+    "benchmark": "r1w15",
+    "forks": 1,
+    "jvm": "/usr/lib/jvm/java-11-openjdk-amd64/bin/java",
+    "jvmArgs": [
+      "-javaagent:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/lib/idea_rt.jar=34811:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin",
+      "-Dfile.encoding=UTF-8"
+    ],
+    "jdkVersion": "11.0.21",
+    "vmName": "OpenJDK 64-Bit Server VM",
+    "vmVersion": "11.0.21+9-post-Ubuntu-0ubuntu122.04",
+    "warmupIterations": 5,
+    "warmupTime": "10 s",
+    "warmupBatchSize": 1,
+    "measurementIterations": 5,
+    "measurementTime": "10 s",
+    "measurementBatchSize": 1,
+    "primaryMetric": {
+      "score": 254229.8497367093,
+      "scoreError": 2123.9438699358693,
+      "scoreConfidence": [
+        252105.90586677342,
+        256353.79360664517
+      ],
+      "scorePercentiles": {
+        "0.0": 253647.10779840505,
+        "50.0": 254357.80750324234,
+        "90.0": 254822.43050327606,
+        "95.0": 254822.43050327606,
+        "99.0": 254822.43050327606,
+        "99.9": 254822.43050327606,
+        "99.99": 254822.43050327606,
+        "99.999": 254822.43050327606,
+        "99.9999": 254822.43050327606,
+        "100.0": 254822.43050327606
+      },
+      "scoreUnit": "ops/ms",
+      "rawData": [
+        [
+          254661.13202460168,
+          254822.43050327606,
+          253647.10779840505,
+          254357.80750324234,
+          253660.77085402142
+        ]
+      ]
+    },
+    "secondaryMetrics": {}
+  },
+  {
+    "jmhVersion": "1.35",
+    "params": {
+      "tool": "volatile_synchronized",
+      "metric": "write"
+    },
+    "mode": "thrpt",
+    "threads": 4,
+    "benchmark": "r1w3",
+    "forks": 1,
+    "jvm": "/usr/lib/jvm/java-11-openjdk-amd64/bin/java",
+    "jvmArgs": [
+      "-javaagent:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/lib/idea_rt.jar=36203:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin",
+      "-Dfile.encoding=UTF-8"
+    ],
+    "jdkVersion": "11.0.21",
+    "vmName": "OpenJDK 64-Bit Server VM",
+    "vmVersion": "11.0.21+9-post-Ubuntu-0ubuntu122.04",
+    "warmupIterations": 5,
+    "warmupTime": "10 s",
+    "warmupBatchSize": 1,
+    "measurementIterations": 5,
+    "measurementTime": "10 s",
+    "measurementBatchSize": 1,
+    "primaryMetric": {
+      "score": 9851.505768438707,
+      "scoreError": 152.51399021166222,
+      "scoreConfidence": [
+        9698.991778227044,
+        10004.01975865037
+      ],
+      "scorePercentiles": {
+        "0.0": 9813.28025038231,
+        "50.0": 9858.060775993907,
+        "90.0": 9909.452933057733,
+        "95.0": 9909.452933057733,
+        "99.0": 9909.452933057733,
+        "99.9": 9909.452933057733,
+        "99.99": 9909.452933057733,
+        "99.999": 9909.452933057733,
+        "99.9999": 9909.452933057733,
+        "100.0": 9909.452933057733
+      },
+      "scoreUnit": "ops/ms",
+      "rawData": [
+        [
+          9909.452933057733,
+          9858.060775993907,
+          9861.472859378264,
+          9815.262023381318,
+          9813.28025038231
+        ]
+      ]
+    },
+    "secondaryMetrics": {}
+  },
+  {
+    "jmhVersion": "1.35",
+    "params": {
+      "tool": "volatile_synchronized",
+      "metric": "write"
+    },
+    "mode": "thrpt",
+    "threads": 8,
+    "benchmark": "r1w7",
+    "forks": 1,
+    "jvm": "/usr/lib/jvm/java-11-openjdk-amd64/bin/java",
+    "jvmArgs": [
+      "-javaagent:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/lib/idea_rt.jar=36959:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin",
+      "-Dfile.encoding=UTF-8"
+    ],
+    "jdkVersion": "11.0.21",
+    "vmName": "OpenJDK 64-Bit Server VM",
+    "vmVersion": "11.0.21+9-post-Ubuntu-0ubuntu122.04",
+    "warmupIterations": 5,
+    "warmupTime": "10 s",
+    "warmupBatchSize": 1,
+    "measurementIterations": 5,
+    "measurementTime": "10 s",
+    "measurementBatchSize": 1,
+    "primaryMetric": {
+      "score": 7753.758538937758,
+      "scoreError": 936.8505795080736,
+      "scoreConfidence": [
+        6816.9079594296845,
+        8690.609118445831
+      ],
+      "scorePercentiles": {
+        "0.0": 7480.246644608515,
+        "50.0": 7653.142780135283,
+        "90.0": 8068.230995075973,
+        "95.0": 8068.230995075973,
+        "99.0": 8068.230995075973,
+        "99.9": 8068.230995075973,
+        "99.99": 8068.230995075973,
+        "99.999": 8068.230995075973,
+        "99.9999": 8068.230995075973,
+        "100.0": 8068.230995075973
+      },
+      "scoreUnit": "ops/ms",
+      "rawData": [
+        [
+          8068.230995075973,
+          7943.538272447413,
+          7623.634002421602,
+          7480.246644608515,
+          7653.142780135283
+        ]
+      ]
+    },
+    "secondaryMetrics": {}
+  },
+  {
+    "jmhVersion": "1.35",
+    "params": {
+      "tool": "volatile_synchronized",
+      "metric": "write"
+    },
+    "mode": "thrpt",
+    "threads": 16,
+    "benchmark": "r1w15",
+    "forks": 1,
+    "jvm": "/usr/lib/jvm/java-11-openjdk-amd64/bin/java",
+    "jvmArgs": [
+      "-javaagent:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/lib/idea_rt.jar=34811:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin",
+      "-Dfile.encoding=UTF-8"
+    ],
+    "jdkVersion": "11.0.21",
+    "vmName": "OpenJDK 64-Bit Server VM",
+    "vmVersion": "11.0.21+9-post-Ubuntu-0ubuntu122.04",
+    "warmupIterations": 5,
+    "warmupTime": "10 s",
+    "warmupBatchSize": 1,
+    "measurementIterations": 5,
+    "measurementTime": "10 s",
+    "measurementBatchSize": 1,
+    "primaryMetric": {
+      "score": 5342.920978099112,
+      "scoreError": 343.2227130942993,
+      "scoreConfidence": [
+        4999.698265004813,
+        5686.1436911934115
+      ],
+      "scorePercentiles": {
+        "0.0": 5244.204802483947,
+        "50.0": 5364.252762315573,
+        "90.0": 5428.549428547076,
+        "95.0": 5428.549428547076,
+        "99.0": 5428.549428547076,
+        "99.9": 5428.549428547076,
+        "99.99": 5428.549428547076,
+        "99.999": 5428.549428547076,
+        "99.9999": 5428.549428547076,
+        "100.0": 5428.549428547076
+      },
+      "scoreUnit": "ops/ms",
+      "rawData": [
+        [
+          5423.099689279293,
+          5364.252762315573,
+          5254.49820786967,
+          5428.549428547076,
+          5244.204802483947
+        ]
+      ]
+    },
+    "secondaryMetrics": {}
+  },
+  {
+    "jmhVersion": "1.35",
+    "params": {
+      "tool": "AtomicLong_counter",
+      "metric": "all"
+    },
+    "mode": "thrpt",
+    "threads": 4,
+    "benchmark": "r2w2",
+    "forks": 1,
+    "jvm": "/usr/lib/jvm/java-11-openjdk-amd64/bin/java",
+    "jvmArgs": [
+      "-javaagent:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/lib/idea_rt.jar=35735:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin",
+      "-Dfile.encoding=UTF-8"
+    ],
+    "jdkVersion": "11.0.21",
+    "vmName": "OpenJDK 64-Bit Server VM",
+    "vmVersion": "11.0.21+9-post-Ubuntu-0ubuntu122.04",
+    "warmupIterations": 5,
+    "warmupTime": "10 s",
+    "warmupBatchSize": 1,
+    "measurementIterations": 5,
+    "measurementTime": "10 s",
+    "measurementBatchSize": 1,
+    "primaryMetric": {
+      "score": 212207.4329740542,
+      "scoreError": 35744.2495392868,
+      "scoreConfidence": [
+        176463.1834347674,
+        247951.682513341
+      ],
+      "scorePercentiles": {
+        "0.0": 200985.7041577322,
+        "50.0": 217726.411510392,
+        "90.0": 220103.3163189293,
+        "95.0": 220103.3163189293,
+        "99.0": 220103.3163189293,
+        "99.9": 220103.3163189293,
+        "99.99": 220103.3163189293,
+        "99.999": 220103.3163189293,
+        "99.9999": 220103.3163189293,
+        "100.0": 220103.3163189293
+      },
+      "scoreUnit": "ops/ms",
+      "rawData": [
+        [
+          217726.411510392,
+          220103.3163189293,
+          218970.112461175,
+          200985.7041577322,
+          203251.6204220424
+        ]
+      ]
+    },
+    "secondaryMetrics": {}
+  },
+  {
+    "jmhVersion": "1.35",
+    "params": {
+      "tool": "AtomicLong_counter",
+      "metric": "all"
+    },
+    "mode": "thrpt",
+    "threads": 8,
+    "benchmark": "r4w4",
+    "forks": 1,
+    "jvm": "/usr/lib/jvm/java-11-openjdk-amd64/bin/java",
+    "jvmArgs": [
+      "-javaagent:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/lib/idea_rt.jar=42185:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin",
+      "-Dfile.encoding=UTF-8"
+    ],
+    "jdkVersion": "11.0.21",
+    "vmName": "OpenJDK 64-Bit Server VM",
+    "vmVersion": "11.0.21+9-post-Ubuntu-0ubuntu122.04",
+    "warmupIterations": 5,
+    "warmupTime": "10 s",
+    "warmupBatchSize": 1,
+    "measurementIterations": 5,
+    "measurementTime": "10 s",
+    "measurementBatchSize": 1,
+    "primaryMetric": {
+      "score": 136419.20802053285,
+      "scoreError": 59545.58448000598,
+      "scoreConfidence": [
+        76873.62354052687,
+        195964.79250053884
+      ],
+      "scorePercentiles": {
+        "0.0": 108941.65110136748,
+        "50.0": 142339.56215025968,
+        "90.0": 145343.62285163073,
+        "95.0": 145343.62285163073,
+        "99.0": 145343.62285163073,
+        "99.9": 145343.62285163073,
+        "99.99": 145343.62285163073,
+        "99.999": 145343.62285163073,
+        "99.9999": 145343.62285163073,
+        "100.0": 145343.62285163073
+      },
+      "scoreUnit": "ops/ms",
+      "rawData": [
+        [
+          145343.62285163073,
+          142339.56215025968,
+          140863.33479818964,
+          144607.8692012168,
+          108941.65110136748
+        ]
+      ]
+    },
+    "secondaryMetrics": {}
+  },
+  {
+    "jmhVersion": "1.35",
+    "params": {
+      "tool": "AtomicLong_counter",
+      "metric": "all"
+    },
+    "mode": "thrpt",
+    "threads": 16,
+    "benchmark": "r8w8",
+    "forks": 1,
+    "jvm": "/usr/lib/jvm/java-11-openjdk-amd64/bin/java",
+    "jvmArgs": [
+      "-javaagent:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/lib/idea_rt.jar=45043:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin",
+      "-Dfile.encoding=UTF-8"
+    ],
+    "jdkVersion": "11.0.21",
+    "vmName": "OpenJDK 64-Bit Server VM",
+    "vmVersion": "11.0.21+9-post-Ubuntu-0ubuntu122.04",
+    "warmupIterations": 5,
+    "warmupTime": "10 s",
+    "warmupBatchSize": 1,
+    "measurementIterations": 5,
+    "measurementTime": "10 s",
+    "measurementBatchSize": 1,
+    "primaryMetric": {
+      "score": 153108.3358279451,
+      "scoreError": 20796.126464817415,
+      "scoreConfidence": [
+        132312.20936312768,
+        173904.4622927625
+      ],
+      "scorePercentiles": {
+        "0.0": 148112.72713012723,
+        "50.0": 151900.65252327104,
+        "90.0": 160201.7066248614,
+        "95.0": 160201.7066248614,
+        "99.0": 160201.7066248614,
+        "99.9": 160201.7066248614,
+        "99.99": 160201.7066248614,
+        "99.999": 160201.7066248614,
+        "99.9999": 160201.7066248614,
+        "100.0": 160201.7066248614
+      },
+      "scoreUnit": "ops/ms",
+      "rawData": [
+        [
+          157109.81692209918,
+          148216.77593936663,
+          160201.7066248614,
+          148112.72713012723,
+          151900.65252327104
+        ]
+      ]
+    },
+    "secondaryMetrics": {}
+  },
+  {
+    "jmhVersion": "1.35",
+    "params": {
+      "tool": "AtomicLong_counter",
+      "metric": "read"
+    },
+    "mode": "thrpt",
+    "threads": 4,
+    "benchmark": "r2w2",
+    "forks": 1,
+    "jvm": "/usr/lib/jvm/java-11-openjdk-amd64/bin/java",
+    "jvmArgs": [
+      "-javaagent:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/lib/idea_rt.jar=35735:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin",
+      "-Dfile.encoding=UTF-8"
+    ],
+    "jdkVersion": "11.0.21",
+    "vmName": "OpenJDK 64-Bit Server VM",
+    "vmVersion": "11.0.21+9-post-Ubuntu-0ubuntu122.04",
+    "warmupIterations": 5,
+    "warmupTime": "10 s",
+    "warmupBatchSize": 1,
+    "measurementIterations": 5,
+    "measurementTime": "10 s",
+    "measurementBatchSize": 1,
+    "primaryMetric": {
+      "score": 169980.71803234532,
+      "scoreError": 43132.57266384559,
+      "scoreConfidence": [
+        126848.14536849974,
+        213113.2906961909
+      ],
+      "scorePercentiles": {
+        "0.0": 157109.75140100307,
+        "50.0": 176820.96461351655,
+        "90.0": 179417.53632081143,
+        "95.0": 179417.53632081143,
+        "99.0": 179417.53632081143,
+        "99.9": 179417.53632081143,
+        "99.99": 179417.53632081143,
+        "99.999": 179417.53632081143,
+        "99.9999": 179417.53632081143,
+        "100.0": 179417.53632081143
+      },
+      "scoreUnit": "ops/ms",
+      "rawData": [
+        [
+          176820.96461351655,
+          179417.53632081143,
+          178141.2305628544,
+          157109.75140100307,
+          158414.10726354105
+        ]
+      ]
+    },
+    "secondaryMetrics": {}
+  },
+  {
+    "jmhVersion": "1.35",
+    "params": {
+      "tool": "AtomicLong_counter",
+      "metric": "read"
+    },
+    "mode": "thrpt",
+    "threads": 8,
+    "benchmark": "r4w4",
+    "forks": 1,
+    "jvm": "/usr/lib/jvm/java-11-openjdk-amd64/bin/java",
+    "jvmArgs": [
+      "-javaagent:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/lib/idea_rt.jar=42185:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin",
+      "-Dfile.encoding=UTF-8"
+    ],
+    "jdkVersion": "11.0.21",
+    "vmName": "OpenJDK 64-Bit Server VM",
+    "vmVersion": "11.0.21+9-post-Ubuntu-0ubuntu122.04",
+    "warmupIterations": 5,
+    "warmupTime": "10 s",
+    "warmupBatchSize": 1,
+    "measurementIterations": 5,
+    "measurementTime": "10 s",
+    "measurementBatchSize": 1,
+    "primaryMetric": {
+      "score": 89737.08963009836,
+      "scoreError": 56766.59861407541,
+      "scoreConfidence": [
+        32970.49101602295,
+        146503.68824417377
+      ],
+      "scorePercentiles": {
+        "0.0": 63957.74718435723,
+        "50.0": 96018.06725471697,
+        "90.0": 99089.05898436211,
+        "95.0": 99089.05898436211,
+        "99.0": 99089.05898436211,
+        "99.9": 99089.05898436211,
+        "99.99": 99089.05898436211,
+        "99.999": 99089.05898436211,
+        "99.9999": 99089.05898436211,
+        "100.0": 99089.05898436211
+      },
+      "scoreUnit": "ops/ms",
+      "rawData": [
+        [
+          99089.05898436211,
+          96018.06725471697,
+          91179.89432849706,
+          98440.6803985584,
+          63957.74718435723
+        ]
+      ]
+    },
+    "secondaryMetrics": {}
+  },
+  {
+    "jmhVersion": "1.35",
+    "params": {
+      "tool": "AtomicLong_counter",
+      "metric": "read"
+    },
+    "mode": "thrpt",
+    "threads": 16,
+    "benchmark": "r8w8",
+    "forks": 1,
+    "jvm": "/usr/lib/jvm/java-11-openjdk-amd64/bin/java",
+    "jvmArgs": [
+      "-javaagent:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/lib/idea_rt.jar=45043:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin",
+      "-Dfile.encoding=UTF-8"
+    ],
+    "jdkVersion": "11.0.21",
+    "vmName": "OpenJDK 64-Bit Server VM",
+    "vmVersion": "11.0.21+9-post-Ubuntu-0ubuntu122.04",
+    "warmupIterations": 5,
+    "warmupTime": "10 s",
+    "warmupBatchSize": 1,
+    "measurementIterations": 5,
+    "measurementTime": "10 s",
+    "measurementBatchSize": 1,
+    "primaryMetric": {
+      "score": 108232.05396330182,
+      "scoreError": 24291.170513331133,
+      "scoreConfidence": [
+        83940.88344997069,
+        132523.22447663295
+      ],
+      "scorePercentiles": {
+        "0.0": 101614.11245493217,
+        "50.0": 107096.73383229572,
+        "90.0": 116746.30926275908,
+        "95.0": 116746.30926275908,
+        "99.0": 116746.30926275908,
+        "99.9": 116746.30926275908,
+        "99.99": 116746.30926275908,
+        "99.999": 116746.30926275908,
+        "99.9999": 116746.30926275908,
+        "100.0": 116746.30926275908
+      },
+      "scoreUnit": "ops/ms",
+      "rawData": [
+        [
+          112396.46668576119,
+          101614.11245493217,
+          116746.30926275908,
+          103306.6475807609,
+          107096.73383229572
+        ]
+      ]
+    },
+    "secondaryMetrics": {}
+  },
+  {
+    "jmhVersion": "1.35",
+    "params": {
+      "tool": "AtomicLong_counter",
+      "metric": "write"
+    },
+    "mode": "thrpt",
+    "threads": 4,
+    "benchmark": "r2w2",
+    "forks": 1,
+    "jvm": "/usr/lib/jvm/java-11-openjdk-amd64/bin/java",
+    "jvmArgs": [
+      "-javaagent:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/lib/idea_rt.jar=35735:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin",
+      "-Dfile.encoding=UTF-8"
+    ],
+    "jdkVersion": "11.0.21",
+    "vmName": "OpenJDK 64-Bit Server VM",
+    "vmVersion": "11.0.21+9-post-Ubuntu-0ubuntu122.04",
+    "warmupIterations": 5,
+    "warmupTime": "10 s",
+    "warmupBatchSize": 1,
+    "measurementIterations": 5,
+    "measurementTime": "10 s",
+    "measurementBatchSize": 1,
+    "primaryMetric": {
+      "score": 42226.71494170888,
+      "scoreError": 7606.951628123958,
+      "scoreConfidence": [
+        34619.763313584925,
+        49833.666569832836
+      ],
+      "scorePercentiles": {
+        "0.0": 40685.779998117876,
+        "50.0": 40905.44689687545,
+        "90.0": 44837.51315850136,
+        "95.0": 44837.51315850136,
+        "99.0": 44837.51315850136,
+        "99.9": 44837.51315850136,
+        "99.99": 44837.51315850136,
+        "99.999": 44837.51315850136,
+        "99.9999": 44837.51315850136,
+        "100.0": 44837.51315850136
+      },
+      "scoreUnit": "ops/ms",
+      "rawData": [
+        [
+          40905.44689687545,
+          40685.779998117876,
+          40828.8818983206,
+          43875.952756729115,
+          44837.51315850136
+        ]
+      ]
+    },
+    "secondaryMetrics": {}
+  },
+  {
+    "jmhVersion": "1.35",
+    "params": {
+      "tool": "AtomicLong_counter",
+      "metric": "write"
+    },
+    "mode": "thrpt",
+    "threads": 8,
+    "benchmark": "r4w4",
+    "forks": 1,
+    "jvm": "/usr/lib/jvm/java-11-openjdk-amd64/bin/java",
+    "jvmArgs": [
+      "-javaagent:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/lib/idea_rt.jar=42185:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin",
+      "-Dfile.encoding=UTF-8"
+    ],
+    "jdkVersion": "11.0.21",
+    "vmName": "OpenJDK 64-Bit Server VM",
+    "vmVersion": "11.0.21+9-post-Ubuntu-0ubuntu122.04",
+    "warmupIterations": 5,
+    "warmupTime": "10 s",
+    "warmupBatchSize": 1,
+    "measurementIterations": 5,
+    "measurementTime": "10 s",
+    "measurementBatchSize": 1,
+    "primaryMetric": {
+      "score": 46682.11839043451,
+      "scoreError": 6798.8326371048215,
+      "scoreConfidence": [
+        39883.285753329685,
+        53480.95102753933
+      ],
+      "scorePercentiles": {
+        "0.0": 44983.903917010255,
+        "50.0": 46254.563867268604,
+        "90.0": 49683.44046969256,
+        "95.0": 49683.44046969256,
+        "99.0": 49683.44046969256,
+        "99.9": 49683.44046969256,
+        "99.99": 49683.44046969256,
+        "99.999": 49683.44046969256,
+        "99.9999": 49683.44046969256,
+        "100.0": 49683.44046969256
+      },
+      "scoreUnit": "ops/ms",
+      "rawData": [
+        [
+          46254.563867268604,
+          46321.49489554269,
+          49683.44046969256,
+          46167.1888026584,
+          44983.903917010255
+        ]
+      ]
+    },
+    "secondaryMetrics": {}
+  },
+  {
+    "jmhVersion": "1.35",
+    "params": {
+      "tool": "AtomicLong_counter",
+      "metric": "write"
+    },
+    "mode": "thrpt",
+    "threads": 16,
+    "benchmark": "r8w8",
+    "forks": 1,
+    "jvm": "/usr/lib/jvm/java-11-openjdk-amd64/bin/java",
+    "jvmArgs": [
+      "-javaagent:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/lib/idea_rt.jar=45043:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin",
+      "-Dfile.encoding=UTF-8"
+    ],
+    "jdkVersion": "11.0.21",
+    "vmName": "OpenJDK 64-Bit Server VM",
+    "vmVersion": "11.0.21+9-post-Ubuntu-0ubuntu122.04",
+    "warmupIterations": 5,
+    "warmupTime": "10 s",
+    "warmupBatchSize": 1,
+    "measurementIterations": 5,
+    "measurementTime": "10 s",
+    "measurementBatchSize": 1,
+    "primaryMetric": {
+      "score": 44876.28186464328,
+      "scoreError": 4320.629161648274,
+      "scoreConfidence": [
+        40555.65270299501,
+        49196.91102629155
+      ],
+      "scorePercentiles": {
+        "0.0": 43455.39736210232,
+        "50.0": 44803.91869097531,
+        "90.0": 46602.66348443446,
+        "95.0": 46602.66348443446,
+        "99.0": 46602.66348443446,
+        "99.9": 46602.66348443446,
+        "99.99": 46602.66348443446,
+        "99.999": 46602.66348443446,
+        "99.9999": 46602.66348443446,
+        "100.0": 46602.66348443446
+      },
+      "scoreUnit": "ops/ms",
+      "rawData": [
+        [
+          44713.350236337974,
+          46602.66348443446,
+          43455.39736210232,
+          44806.079549366324,
+          44803.91869097531
+        ]
+      ]
+    },
+    "secondaryMetrics": {}
+  },
+  {
+    "jmhVersion": "1.35",
+    "params": {
+      "tool": "LongAdder_counter",
+      "metric": "all"
+    },
+    "mode": "thrpt",
+    "threads": 4,
+    "benchmark": "r2w2",
+    "forks": 1,
+    "jvm": "/usr/lib/jvm/java-11-openjdk-amd64/bin/java",
+    "jvmArgs": [
+      "-javaagent:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/lib/idea_rt.jar=35735:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin",
+      "-Dfile.encoding=UTF-8"
+    ],
+    "jdkVersion": "11.0.21",
+    "vmName": "OpenJDK 64-Bit Server VM",
+    "vmVersion": "11.0.21+9-post-Ubuntu-0ubuntu122.04",
+    "warmupIterations": 5,
+    "warmupTime": "10 s",
+    "warmupBatchSize": 1,
+    "measurementIterations": 5,
+    "measurementTime": "10 s",
+    "measurementBatchSize": 1,
+    "primaryMetric": {
+      "score": 99509.79707843189,
+      "scoreError": 1015.5354261817856,
+      "scoreConfidence": [
+        98494.2616522501,
+        100525.33250461367
+      ],
+      "scorePercentiles": {
+        "0.0": 99163.42816962386,
+        "50.0": 99510.70452020018,
+        "90.0": 99804.87517170687,
+        "95.0": 99804.87517170687,
+        "99.0": 99804.87517170687,
+        "99.9": 99804.87517170687,
+        "99.99": 99804.87517170687,
+        "99.999": 99804.87517170687,
+        "99.9999": 99804.87517170687,
+        "100.0": 99804.87517170687
+      },
+      "scoreUnit": "ops/ms",
+      "rawData": [
+        [
+          99804.87517170687,
+          99721.94367944956,
+          99348.03385117899,
+          99510.70452020018,
+          99163.42816962386
+        ]
+      ]
+    },
+    "secondaryMetrics": {}
+  },
+  {
+    "jmhVersion": "1.35",
+    "params": {
+      "tool": "LongAdder_counter",
+      "metric": "all"
+    },
+    "mode": "thrpt",
+    "threads": 8,
+    "benchmark": "r4w4",
+    "forks": 1,
+    "jvm": "/usr/lib/jvm/java-11-openjdk-amd64/bin/java",
+    "jvmArgs": [
+      "-javaagent:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/lib/idea_rt.jar=42185:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin",
+      "-Dfile.encoding=UTF-8"
+    ],
+    "jdkVersion": "11.0.21",
+    "vmName": "OpenJDK 64-Bit Server VM",
+    "vmVersion": "11.0.21+9-post-Ubuntu-0ubuntu122.04",
+    "warmupIterations": 5,
+    "warmupTime": "10 s",
+    "warmupBatchSize": 1,
+    "measurementIterations": 5,
+    "measurementTime": "10 s",
+    "measurementBatchSize": 1,
+    "primaryMetric": {
+      "score": 96361.42845849643,
+      "scoreError": 23209.66214328439,
+      "scoreConfidence": [
+        73151.76631521204,
+        119571.09060178083
+      ],
+      "scorePercentiles": {
+        "0.0": 88104.9029171956,
+        "50.0": 98109.44048313847,
+        "90.0": 104033.82368994478,
+        "95.0": 104033.82368994478,
+        "99.0": 104033.82368994478,
+        "99.9": 104033.82368994478,
+        "99.99": 104033.82368994478,
+        "99.999": 104033.82368994478,
+        "99.9999": 104033.82368994478,
+        "100.0": 104033.82368994478
+      },
+      "scoreUnit": "ops/ms",
+      "rawData": [
+        [
+          98476.99823252212,
+          98109.44048313847,
+          104033.82368994478,
+          93081.97696968124,
+          88104.9029171956
+        ]
+      ]
+    },
+    "secondaryMetrics": {}
+  },
+  {
+    "jmhVersion": "1.35",
+    "params": {
+      "tool": "LongAdder_counter",
+      "metric": "all"
+    },
+    "mode": "thrpt",
+    "threads": 16,
+    "benchmark": "r8w8",
+    "forks": 1,
+    "jvm": "/usr/lib/jvm/java-11-openjdk-amd64/bin/java",
+    "jvmArgs": [
+      "-javaagent:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/lib/idea_rt.jar=45043:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin",
+      "-Dfile.encoding=UTF-8"
+    ],
+    "jdkVersion": "11.0.21",
+    "vmName": "OpenJDK 64-Bit Server VM",
+    "vmVersion": "11.0.21+9-post-Ubuntu-0ubuntu122.04",
+    "warmupIterations": 5,
+    "warmupTime": "10 s",
+    "warmupBatchSize": 1,
+    "measurementIterations": 5,
+    "measurementTime": "10 s",
+    "measurementBatchSize": 1,
+    "primaryMetric": {
+      "score": 95864.93523872834,
+      "scoreError": 13579.879954002468,
+      "scoreConfidence": [
+        82285.05528472588,
+        109444.8151927308
+      ],
+      "scorePercentiles": {
+        "0.0": 91584.76652707843,
+        "50.0": 95684.51371622986,
+        "90.0": 100908.23137772935,
+        "95.0": 100908.23137772935,
+        "99.0": 100908.23137772935,
+        "99.9": 100908.23137772935,
+        "99.99": 100908.23137772935,
+        "99.999": 100908.23137772935,
+        "99.9999": 100908.23137772935,
+        "100.0": 100908.23137772935
+      },
+      "scoreUnit": "ops/ms",
+      "rawData": [
+        [
+          93871.80620302474,
+          95684.51371622986,
+          91584.76652707843,
+          100908.23137772935,
+          97275.35836957935
+        ]
+      ]
+    },
+    "secondaryMetrics": {}
+  },
+  {
+    "jmhVersion": "1.35",
+    "params": {
+      "tool": "LongAdder_counter",
+      "metric": "read"
+    },
+    "mode": "thrpt",
+    "threads": 4,
+    "benchmark": "r2w2",
+    "forks": 1,
+    "jvm": "/usr/lib/jvm/java-11-openjdk-amd64/bin/java",
+    "jvmArgs": [
+      "-javaagent:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/lib/idea_rt.jar=35735:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin",
+      "-Dfile.encoding=UTF-8"
+    ],
+    "jdkVersion": "11.0.21",
+    "vmName": "OpenJDK 64-Bit Server VM",
+    "vmVersion": "11.0.21+9-post-Ubuntu-0ubuntu122.04",
+    "warmupIterations": 5,
+    "warmupTime": "10 s",
+    "warmupBatchSize": 1,
+    "measurementIterations": 5,
+    "measurementTime": "10 s",
+    "measurementBatchSize": 1,
+    "primaryMetric": {
+      "score": 54891.21172740214,
+      "scoreError": 1520.8588061198775,
+      "scoreConfidence": [
+        53370.35292128226,
+        56412.07053352201
+      ],
+      "scorePercentiles": {
+        "0.0": 54427.22723689045,
+        "50.0": 54889.87205083468,
+        "90.0": 55388.04441095741,
+        "95.0": 55388.04441095741,
+        "99.0": 55388.04441095741,
+        "99.9": 55388.04441095741,
+        "99.99": 55388.04441095741,
+        "99.999": 55388.04441095741,
+        "99.9999": 55388.04441095741,
+        "100.0": 55388.04441095741
+      },
+      "scoreUnit": "ops/ms",
+      "rawData": [
+        [
+          55388.04441095741,
+          55159.49800669216,
+          54591.416931635984,
+          54889.87205083468,
+          54427.22723689045
+        ]
+      ]
+    },
+    "secondaryMetrics": {}
+  },
+  {
+    "jmhVersion": "1.35",
+    "params": {
+      "tool": "LongAdder_counter",
+      "metric": "read"
+    },
+    "mode": "thrpt",
+    "threads": 8,
+    "benchmark": "r4w4",
+    "forks": 1,
+    "jvm": "/usr/lib/jvm/java-11-openjdk-amd64/bin/java",
+    "jvmArgs": [
+      "-javaagent:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/lib/idea_rt.jar=42185:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin",
+      "-Dfile.encoding=UTF-8"
+    ],
+    "jdkVersion": "11.0.21",
+    "vmName": "OpenJDK 64-Bit Server VM",
+    "vmVersion": "11.0.21+9-post-Ubuntu-0ubuntu122.04",
+    "warmupIterations": 5,
+    "warmupTime": "10 s",
+    "warmupBatchSize": 1,
+    "measurementIterations": 5,
+    "measurementTime": "10 s",
+    "measurementBatchSize": 1,
+    "primaryMetric": {
+      "score": 29066.97272086313,
+      "scoreError": 11629.657804131983,
+      "scoreConfidence": [
+        17437.31491673115,
+        40696.63052499511
+      ],
+      "scorePercentiles": {
+        "0.0": 25929.295563990145,
+        "50.0": 29869.218324196234,
+        "90.0": 33169.100776343315,
+        "95.0": 33169.100776343315,
+        "99.0": 33169.100776343315,
+        "99.9": 33169.100776343315,
+        "99.99": 33169.100776343315,
+        "99.999": 33169.100776343315,
+        "99.9999": 33169.100776343315,
+        "100.0": 33169.100776343315
+      },
+      "scoreUnit": "ops/ms",
+      "rawData": [
+        [
+          33169.100776343315,
+          26233.06099028229,
+          25929.295563990145,
+          30134.187949503656,
+          29869.218324196234
+        ]
+      ]
+    },
+    "secondaryMetrics": {}
+  },
+  {
+    "jmhVersion": "1.35",
+    "params": {
+      "tool": "LongAdder_counter",
+      "metric": "read"
+    },
+    "mode": "thrpt",
+    "threads": 16,
+    "benchmark": "r8w8",
+    "forks": 1,
+    "jvm": "/usr/lib/jvm/java-11-openjdk-amd64/bin/java",
+    "jvmArgs": [
+      "-javaagent:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/lib/idea_rt.jar=45043:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin",
+      "-Dfile.encoding=UTF-8"
+    ],
+    "jdkVersion": "11.0.21",
+    "vmName": "OpenJDK 64-Bit Server VM",
+    "vmVersion": "11.0.21+9-post-Ubuntu-0ubuntu122.04",
+    "warmupIterations": 5,
+    "warmupTime": "10 s",
+    "warmupBatchSize": 1,
+    "measurementIterations": 5,
+    "measurementTime": "10 s",
+    "measurementBatchSize": 1,
+    "primaryMetric": {
+      "score": 33509.398751001936,
+      "scoreError": 5327.454445770899,
+      "scoreConfidence": [
+        28181.944305231038,
+        38836.853196772834
+      ],
+      "scorePercentiles": {
+        "0.0": 31880.9070750284,
+        "50.0": 33778.641554944625,
+        "90.0": 35190.6618756329,
+        "95.0": 35190.6618756329,
+        "99.0": 35190.6618756329,
+        "99.9": 35190.6618756329,
+        "99.99": 35190.6618756329,
+        "99.999": 35190.6618756329,
+        "99.9999": 35190.6618756329,
+        "100.0": 35190.6618756329
+      },
+      "scoreUnit": "ops/ms",
+      "rawData": [
+        [
+          31880.9070750284,
+          32335.086519376375,
+          34361.69673002738,
+          33778.641554944625,
+          35190.6618756329
+        ]
+      ]
+    },
+    "secondaryMetrics": {}
+  },
+  {
+    "jmhVersion": "1.35",
+    "params": {
+      "tool": "LongAdder_counter",
+      "metric": "write"
+    },
+    "mode": "thrpt",
+    "threads": 4,
+    "benchmark": "r2w2",
+    "forks": 1,
+    "jvm": "/usr/lib/jvm/java-11-openjdk-amd64/bin/java",
+    "jvmArgs": [
+      "-javaagent:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/lib/idea_rt.jar=35735:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin",
+      "-Dfile.encoding=UTF-8"
+    ],
+    "jdkVersion": "11.0.21",
+    "vmName": "OpenJDK 64-Bit Server VM",
+    "vmVersion": "11.0.21+9-post-Ubuntu-0ubuntu122.04",
+    "warmupIterations": 5,
+    "warmupTime": "10 s",
+    "warmupBatchSize": 1,
+    "measurementIterations": 5,
+    "measurementTime": "10 s",
+    "measurementBatchSize": 1,
+    "primaryMetric": {
+      "score": 44618.58535102975,
+      "scoreError": 533.3794001624409,
+      "scoreConfidence": [
+        44085.20595086731,
+        45151.964751192194
+      ],
+      "scorePercentiles": {
+        "0.0": 44416.83076074944,
+        "50.0": 44620.8324693655,
+        "90.0": 44756.61691954301,
+        "95.0": 44756.61691954301,
+        "99.0": 44756.61691954301,
+        "99.9": 44756.61691954301,
+        "99.99": 44756.61691954301,
+        "99.999": 44756.61691954301,
+        "99.9999": 44756.61691954301,
+        "100.0": 44756.61691954301
+      },
+      "scoreUnit": "ops/ms",
+      "rawData": [
+        [
+          44416.83076074944,
+          44562.445672757385,
+          44756.61691954301,
+          44620.8324693655,
+          44736.20093273342
+        ]
+      ]
+    },
+    "secondaryMetrics": {}
+  },
+  {
+    "jmhVersion": "1.35",
+    "params": {
+      "tool": "LongAdder_counter",
+      "metric": "write"
+    },
+    "mode": "thrpt",
+    "threads": 8,
+    "benchmark": "r4w4",
+    "forks": 1,
+    "jvm": "/usr/lib/jvm/java-11-openjdk-amd64/bin/java",
+    "jvmArgs": [
+      "-javaagent:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/lib/idea_rt.jar=42185:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin",
+      "-Dfile.encoding=UTF-8"
+    ],
+    "jdkVersion": "11.0.21",
+    "vmName": "OpenJDK 64-Bit Server VM",
+    "vmVersion": "11.0.21+9-post-Ubuntu-0ubuntu122.04",
+    "warmupIterations": 5,
+    "warmupTime": "10 s",
+    "warmupBatchSize": 1,
+    "measurementIterations": 5,
+    "measurementTime": "10 s",
+    "measurementBatchSize": 1,
+    "primaryMetric": {
+      "score": 67294.45573763333,
+      "scoreError": 29997.538803078103,
+      "scoreConfidence": [
+        37296.91693455522,
+        97291.99454071143
+      ],
+      "scorePercentiles": {
+        "0.0": 58235.68459299937,
+        "50.0": 65307.897456178805,
+        "90.0": 78104.52812595465,
+        "95.0": 78104.52812595465,
+        "99.0": 78104.52812595465,
+        "99.9": 78104.52812595465,
+        "99.99": 78104.52812595465,
+        "99.999": 78104.52812595465,
+        "99.9999": 78104.52812595465,
+        "100.0": 78104.52812595465
+      },
+      "scoreUnit": "ops/ms",
+      "rawData": [
+        [
+          65307.897456178805,
+          71876.37949285618,
+          78104.52812595465,
+          62947.78902017759,
+          58235.68459299937
+        ]
+      ]
+    },
+    "secondaryMetrics": {}
+  },
+  {
+    "jmhVersion": "1.35",
+    "params": {
+      "tool": "LongAdder_counter",
+      "metric": "write"
+    },
+    "mode": "thrpt",
+    "threads": 16,
+    "benchmark": "r8w8",
+    "forks": 1,
+    "jvm": "/usr/lib/jvm/java-11-openjdk-amd64/bin/java",
+    "jvmArgs": [
+      "-javaagent:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/lib/idea_rt.jar=45043:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin",
+      "-Dfile.encoding=UTF-8"
+    ],
+    "jdkVersion": "11.0.21",
+    "vmName": "OpenJDK 64-Bit Server VM",
+    "vmVersion": "11.0.21+9-post-Ubuntu-0ubuntu122.04",
+    "warmupIterations": 5,
+    "warmupTime": "10 s",
+    "warmupBatchSize": 1,
+    "measurementIterations": 5,
+    "measurementTime": "10 s",
+    "measurementBatchSize": 1,
+    "primaryMetric": {
+      "score": 62355.5364877264,
+      "scoreError": 13658.654276634623,
+      "scoreConfidence": [
+        48696.882211091775,
+        76014.19076436102
+      ],
+      "scorePercentiles": {
+        "0.0": 57223.069797051045,
+        "50.0": 62084.69649394645,
+        "90.0": 67129.5898227847,
+        "95.0": 67129.5898227847,
+        "99.0": 67129.5898227847,
+        "99.9": 67129.5898227847,
+        "99.99": 67129.5898227847,
+        "99.999": 67129.5898227847,
+        "99.9999": 67129.5898227847,
+        "100.0": 67129.5898227847
+      },
+      "scoreUnit": "ops/ms",
+      "rawData": [
+        [
+          61990.899127996316,
+          63349.427196853474,
+          57223.069797051045,
+          67129.5898227847,
+          62084.69649394645
+        ]
+      ]
+    },
+    "secondaryMetrics": {}
+  },
+  {
+    "jmhVersion": "1.35",
+    "params": {
+      "tool": "volatile_synchronized",
+      "metric": "all"
+    },
+    "mode": "thrpt",
+    "threads": 4,
+    "benchmark": "r2w2",
+    "forks": 1,
+    "jvm": "/usr/lib/jvm/java-11-openjdk-amd64/bin/java",
+    "jvmArgs": [
+      "-javaagent:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/lib/idea_rt.jar=35735:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin",
+      "-Dfile.encoding=UTF-8"
+    ],
+    "jdkVersion": "11.0.21",
+    "vmName": "OpenJDK 64-Bit Server VM",
+    "vmVersion": "11.0.21+9-post-Ubuntu-0ubuntu122.04",
+    "warmupIterations": 5,
+    "warmupTime": "10 s",
+    "warmupBatchSize": 1,
+    "measurementIterations": 5,
+    "measurementTime": "10 s",
+    "measurementBatchSize": 1,
+    "primaryMetric": {
+      "score": 482379.001639929,
+      "scoreError": 81409.47521082501,
+      "scoreConfidence": [
+        400969.52642910404,
+        563788.476850754
+      ],
+      "scorePercentiles": {
+        "0.0": 457009.66892915085,
+        "50.0": 487567.0073190965,
+        "90.0": 509064.0549298893,
+        "95.0": 509064.0549298893,
+        "99.0": 509064.0549298893,
+        "99.9": 509064.0549298893,
+        "99.99": 509064.0549298893,
+        "99.999": 509064.0549298893,
+        "99.9999": 509064.0549298893,
+        "100.0": 509064.0549298893
+      },
+      "scoreUnit": "ops/ms",
+      "rawData": [
+        [
+          509064.0549298893,
+          492986.071984688,
+          487567.0073190965,
+          465268.2050368207,
+          457009.66892915085
+        ]
+      ]
+    },
+    "secondaryMetrics": {}
+  },
+  {
+    "jmhVersion": "1.35",
+    "params": {
+      "tool": "volatile_synchronized",
+      "metric": "all"
+    },
+    "mode": "thrpt",
+    "threads": 8,
+    "benchmark": "r4w4",
+    "forks": 1,
+    "jvm": "/usr/lib/jvm/java-11-openjdk-amd64/bin/java",
+    "jvmArgs": [
+      "-javaagent:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/lib/idea_rt.jar=42185:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin",
+      "-Dfile.encoding=UTF-8"
+    ],
+    "jdkVersion": "11.0.21",
+    "vmName": "OpenJDK 64-Bit Server VM",
+    "vmVersion": "11.0.21+9-post-Ubuntu-0ubuntu122.04",
+    "warmupIterations": 5,
+    "warmupTime": "10 s",
+    "warmupBatchSize": 1,
+    "measurementIterations": 5,
+    "measurementTime": "10 s",
+    "measurementBatchSize": 1,
+    "primaryMetric": {
+      "score": 592576.4372131542,
+      "scoreError": 41741.452358283605,
+      "scoreConfidence": [
+        550834.9848548706,
+        634317.8895714377
+      ],
+      "scorePercentiles": {
+        "0.0": 582090.8503502327,
+        "50.0": 588591.383826345,
+        "90.0": 604769.1062170097,
+        "95.0": 604769.1062170097,
+        "99.0": 604769.1062170097,
+        "99.9": 604769.1062170097,
+        "99.99": 604769.1062170097,
+        "99.999": 604769.1062170097,
+        "99.9999": 604769.1062170097,
+        "100.0": 604769.1062170097
+      },
+      "scoreUnit": "ops/ms",
+      "rawData": [
+        [
+          588591.383826345,
+          603537.5686690942,
+          604769.1062170097,
+          582090.8503502327,
+          583893.2770030887
+        ]
+      ]
+    },
+    "secondaryMetrics": {}
+  },
+  {
+    "jmhVersion": "1.35",
+    "params": {
+      "tool": "volatile_synchronized",
+      "metric": "all"
+    },
+    "mode": "thrpt",
+    "threads": 16,
+    "benchmark": "r8w8",
+    "forks": 1,
+    "jvm": "/usr/lib/jvm/java-11-openjdk-amd64/bin/java",
+    "jvmArgs": [
+      "-javaagent:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/lib/idea_rt.jar=45043:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin",
+      "-Dfile.encoding=UTF-8"
+    ],
+    "jdkVersion": "11.0.21",
+    "vmName": "OpenJDK 64-Bit Server VM",
+    "vmVersion": "11.0.21+9-post-Ubuntu-0ubuntu122.04",
+    "warmupIterations": 5,
+    "warmupTime": "10 s",
+    "warmupBatchSize": 1,
+    "measurementIterations": 5,
+    "measurementTime": "10 s",
+    "measurementBatchSize": 1,
+    "primaryMetric": {
+      "score": 626605.7513768726,
+      "scoreError": 178682.62635083895,
+      "scoreConfidence": [
+        447923.1250260337,
+        805288.3777277116
+      ],
+      "scorePercentiles": {
+        "0.0": 576943.706598526,
+        "50.0": 624358.059022732,
+        "90.0": 685678.7035974269,
+        "95.0": 685678.7035974269,
+        "99.0": 685678.7035974269,
+        "99.9": 685678.7035974269,
+        "99.99": 685678.7035974269,
+        "99.999": 685678.7035974269,
+        "99.9999": 685678.7035974269,
+        "100.0": 685678.7035974269
+      },
+      "scoreUnit": "ops/ms",
+      "rawData": [
+        [
+          576943.706598526,
+          685678.7035974269,
+          624358.059022732,
+          586785.8448328809,
+          659262.4428327975
+        ]
+      ]
+    },
+    "secondaryMetrics": {}
+  },
+  {
+    "jmhVersion": "1.35",
+    "params": {
+      "tool": "volatile_synchronized",
+      "metric": "read"
+    },
+    "mode": "thrpt",
+    "threads": 4,
+    "benchmark": "r2w2",
+    "forks": 1,
+    "jvm": "/usr/lib/jvm/java-11-openjdk-amd64/bin/java",
+    "jvmArgs": [
+      "-javaagent:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/lib/idea_rt.jar=35735:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin",
+      "-Dfile.encoding=UTF-8"
+    ],
+    "jdkVersion": "11.0.21",
+    "vmName": "OpenJDK 64-Bit Server VM",
+    "vmVersion": "11.0.21+9-post-Ubuntu-0ubuntu122.04",
+    "warmupIterations": 5,
+    "warmupTime": "10 s",
+    "warmupBatchSize": 1,
+    "measurementIterations": 5,
+    "measurementTime": "10 s",
+    "measurementBatchSize": 1,
+    "primaryMetric": {
+      "score": 475333.83224630525,
+      "scoreError": 82161.34040690408,
+      "scoreConfidence": [
+        393172.4918394012,
+        557495.1726532093
+      ],
+      "scorePercentiles": {
+        "0.0": 449550.8543043993,
+        "50.0": 480677.4526985026,
+        "90.0": 502068.82820386323,
+        "95.0": 502068.82820386323,
+        "99.0": 502068.82820386323,
+        "99.9": 502068.82820386323,
+        "99.99": 502068.82820386323,
+        "99.999": 502068.82820386323,
+        "99.9999": 502068.82820386323,
+        "100.0": 502068.82820386323
+      },
+      "scoreUnit": "ops/ms",
+      "rawData": [
+        [
+          502068.82820386323,
+          486207.1255509539,
+          480677.4526985026,
+          458164.9004738071,
+          449550.8543043993
+        ]
+      ]
+    },
+    "secondaryMetrics": {}
+  },
+  {
+    "jmhVersion": "1.35",
+    "params": {
+      "tool": "volatile_synchronized",
+      "metric": "read"
+    },
+    "mode": "thrpt",
+    "threads": 8,
+    "benchmark": "r4w4",
+    "forks": 1,
+    "jvm": "/usr/lib/jvm/java-11-openjdk-amd64/bin/java",
+    "jvmArgs": [
+      "-javaagent:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/lib/idea_rt.jar=42185:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin",
+      "-Dfile.encoding=UTF-8"
+    ],
+    "jdkVersion": "11.0.21",
+    "vmName": "OpenJDK 64-Bit Server VM",
+    "vmVersion": "11.0.21+9-post-Ubuntu-0ubuntu122.04",
+    "warmupIterations": 5,
+    "warmupTime": "10 s",
+    "warmupBatchSize": 1,
+    "measurementIterations": 5,
+    "measurementTime": "10 s",
+    "measurementBatchSize": 1,
+    "primaryMetric": {
+      "score": 587471.4039278383,
+      "scoreError": 41698.93401207368,
+      "scoreConfidence": [
+        545772.4699157646,
+        629170.337939912
+      ],
+      "scorePercentiles": {
+        "0.0": 576973.3241759936,
+        "50.0": 583496.105558428,
+        "90.0": 599682.6785347733,
+        "95.0": 599682.6785347733,
+        "99.0": 599682.6785347733,
+        "99.9": 599682.6785347733,
+        "99.99": 599682.6785347733,
+        "99.999": 599682.6785347733,
+        "99.9999": 599682.6785347733,
+        "100.0": 599682.6785347733
+      },
+      "scoreUnit": "ops/ms",
+      "rawData": [
+        [
+          583496.105558428,
+          598384.8250199294,
+          599682.6785347733,
+          576973.3241759936,
+          578820.0863500674
+        ]
+      ]
+    },
+    "secondaryMetrics": {}
+  },
+  {
+    "jmhVersion": "1.35",
+    "params": {
+      "tool": "volatile_synchronized",
+      "metric": "read"
+    },
+    "mode": "thrpt",
+    "threads": 16,
+    "benchmark": "r8w8",
+    "forks": 1,
+    "jvm": "/usr/lib/jvm/java-11-openjdk-amd64/bin/java",
+    "jvmArgs": [
+      "-javaagent:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/lib/idea_rt.jar=45043:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin",
+      "-Dfile.encoding=UTF-8"
+    ],
+    "jdkVersion": "11.0.21",
+    "vmName": "OpenJDK 64-Bit Server VM",
+    "vmVersion": "11.0.21+9-post-Ubuntu-0ubuntu122.04",
+    "warmupIterations": 5,
+    "warmupTime": "10 s",
+    "warmupBatchSize": 1,
+    "measurementIterations": 5,
+    "measurementTime": "10 s",
+    "measurementBatchSize": 1,
+    "primaryMetric": {
+      "score": 618866.6390416106,
+      "scoreError": 179655.90641716146,
+      "scoreConfidence": [
+        439210.7326244492,
+        798522.5454587721
+      ],
+      "scorePercentiles": {
+        "0.0": 569037.9834662317,
+        "50.0": 616356.0345010966,
+        "90.0": 678359.0706660149,
+        "95.0": 678359.0706660149,
+        "99.0": 678359.0706660149,
+        "99.9": 678359.0706660149,
+        "99.99": 678359.0706660149,
+        "99.999": 678359.0706660149,
+        "99.9999": 678359.0706660149,
+        "100.0": 678359.0706660149
+      },
+      "scoreUnit": "ops/ms",
+      "rawData": [
+        [
+          569037.9834662317,
+          678359.0706660149,
+          616356.0345010966,
+          578868.7445433526,
+          651711.3620313576
+        ]
+      ]
+    },
+    "secondaryMetrics": {}
+  },
+  {
+    "jmhVersion": "1.35",
+    "params": {
+      "tool": "volatile_synchronized",
+      "metric": "write"
+    },
+    "mode": "thrpt",
+    "threads": 4,
+    "benchmark": "r2w2",
+    "forks": 1,
+    "jvm": "/usr/lib/jvm/java-11-openjdk-amd64/bin/java",
+    "jvmArgs": [
+      "-javaagent:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/lib/idea_rt.jar=35735:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin",
+      "-Dfile.encoding=UTF-8"
+    ],
+    "jdkVersion": "11.0.21",
+    "vmName": "OpenJDK 64-Bit Server VM",
+    "vmVersion": "11.0.21+9-post-Ubuntu-0ubuntu122.04",
+    "warmupIterations": 5,
+    "warmupTime": "10 s",
+    "warmupBatchSize": 1,
+    "measurementIterations": 5,
+    "measurementTime": "10 s",
+    "measurementBatchSize": 1,
+    "primaryMetric": {
+      "score": 7045.169393623835,
+      "scoreError": 1004.2486880146797,
+      "scoreConfidence": [
+        6040.920705609155,
+        8049.418081638515
+      ],
+      "scorePercentiles": {
+        "0.0": 6778.946433734109,
+        "50.0": 6995.226726026045,
+        "90.0": 7458.814624751566,
+        "95.0": 7458.814624751566,
+        "99.0": 7458.814624751566,
+        "99.9": 7458.814624751566,
+        "99.99": 7458.814624751566,
+        "99.999": 7458.814624751566,
+        "99.9999": 7458.814624751566,
+        "100.0": 7458.814624751566
+      },
+      "scoreUnit": "ops/ms",
+      "rawData": [
+        [
+          6995.226726026045,
+          6778.946433734109,
+          6889.554620593832,
+          7103.304563013629,
+          7458.814624751566
+        ]
+      ]
+    },
+    "secondaryMetrics": {}
+  },
+  {
+    "jmhVersion": "1.35",
+    "params": {
+      "tool": "volatile_synchronized",
+      "metric": "write"
+    },
+    "mode": "thrpt",
+    "threads": 8,
+    "benchmark": "r4w4",
+    "forks": 1,
+    "jvm": "/usr/lib/jvm/java-11-openjdk-amd64/bin/java",
+    "jvmArgs": [
+      "-javaagent:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/lib/idea_rt.jar=42185:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin",
+      "-Dfile.encoding=UTF-8"
+    ],
+    "jdkVersion": "11.0.21",
+    "vmName": "OpenJDK 64-Bit Server VM",
+    "vmVersion": "11.0.21+9-post-Ubuntu-0ubuntu122.04",
+    "warmupIterations": 5,
+    "warmupTime": "10 s",
+    "warmupBatchSize": 1,
+    "measurementIterations": 5,
+    "measurementTime": "10 s",
+    "measurementBatchSize": 1,
+    "primaryMetric": {
+      "score": 5105.033285315664,
+      "scoreError": 120.04553291857604,
+      "scoreConfidence": [
+        4984.987752397088,
+        5225.07881823424
+      ],
+      "scorePercentiles": {
+        "0.0": 5073.190653021349,
+        "50.0": 5095.278267916965,
+        "90.0": 5152.743649164717,
+        "95.0": 5152.743649164717,
+        "99.0": 5152.743649164717,
+        "99.9": 5152.743649164717,
+        "99.99": 5152.743649164717,
+        "99.999": 5152.743649164717,
+        "99.9999": 5152.743649164717,
+        "100.0": 5152.743649164717
+      },
+      "scoreUnit": "ops/ms",
+      "rawData": [
+        [
+          5095.278267916965,
+          5152.743649164717,
+          5086.42768223628,
+          5117.526174239009,
+          5073.190653021349
+        ]
+      ]
+    },
+    "secondaryMetrics": {}
+  },
+  {
+    "jmhVersion": "1.35",
+    "params": {
+      "tool": "volatile_synchronized",
+      "metric": "write"
+    },
+    "mode": "thrpt",
+    "threads": 16,
+    "benchmark": "r8w8",
+    "forks": 1,
+    "jvm": "/usr/lib/jvm/java-11-openjdk-amd64/bin/java",
+    "jvmArgs": [
+      "-javaagent:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/lib/idea_rt.jar=45043:/home/andrei/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin",
+      "-Dfile.encoding=UTF-8"
+    ],
+    "jdkVersion": "11.0.21",
+    "vmName": "OpenJDK 64-Bit Server VM",
+    "vmVersion": "11.0.21+9-post-Ubuntu-0ubuntu122.04",
+    "warmupIterations": 5,
+    "warmupTime": "10 s",
+    "warmupBatchSize": 1,
+    "measurementIterations": 5,
+    "measurementTime": "10 s",
+    "measurementBatchSize": 1,
+    "primaryMetric": {
+      "score": 7739.112335261937,
+      "scoreError": 1122.4486949175368,
+      "scoreConfidence": [
+        6616.6636403444,
+        8861.561030179473
+      ],
+      "scorePercentiles": {
+        "0.0": 7319.632931411969,
+        "50.0": 7905.723132294079,
+        "90.0": 8002.024521635325,
+        "95.0": 8002.024521635325,
+        "99.0": 8002.024521635325,
+        "99.9": 8002.024521635325,
+        "99.99": 8002.024521635325,
+        "99.999": 8002.024521635325,
+        "99.9999": 8002.024521635325,
+        "100.0": 8002.024521635325
+      },
+      "scoreUnit": "ops/ms",
+      "rawData": [
+        [
+          7905.723132294079,
+          7319.632931411969,
+          8002.024521635325,
+          7917.100289528326,
+          7551.080801439986
+        ]
+      ]
+    },
+    "secondaryMetrics": {}
+  }
+]
