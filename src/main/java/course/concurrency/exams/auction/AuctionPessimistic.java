@@ -1,22 +1,38 @@
 package course.concurrency.exams.auction;
 
+import static course.concurrency.exams.auction.Bid.DEFAULT_VALUE;
+
 public class AuctionPessimistic implements Auction {
 
-    private Notifier notifier;
+    private final Notifier notifier;
+    private final Object lock;
+    private volatile Bid latestBid;
 
     public AuctionPessimistic(Notifier notifier) {
         this.notifier = notifier;
+        this.lock = new Object();
+        this.latestBid = new Bid(DEFAULT_VALUE, DEFAULT_VALUE, DEFAULT_VALUE);
     }
 
-    private Bid latestBid;
-
     public boolean propose(Bid bid) {
-        if (bid.getPrice() > latestBid.getPrice()) {
-            notifier.sendOutdatedMessage(latestBid);
-            latestBid = bid;
-            return true;
+        if (bid.getPrice() <= latestBid.getPrice()) {
+            return false;
         }
-        return false;
+
+        Bid tempLatestBid;
+
+        synchronized (lock) {
+            tempLatestBid = latestBid;
+
+            if (bid.getPrice() <= tempLatestBid.getPrice()) {
+                return false;
+            }
+
+            latestBid = bid;
+        }
+
+        notifier.sendOutdatedMessage(tempLatestBid);
+        return true;
     }
 
     public Bid getLatestBid() {
