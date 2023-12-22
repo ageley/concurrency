@@ -1,16 +1,37 @@
 package course.concurrency.exams.refactoring;
 
+import course.concurrency.exams.refactoring.Others.MountTableManager;
 import course.concurrency.exams.refactoring.Others.RouterState;
 
+import java.util.AbstractMap.SimpleEntry;
 import java.util.List;
-import java.util.concurrent.CountDownLatch;
+import java.util.Map.Entry;
+import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.TimeUnit;
+import java.util.concurrent.atomic.AtomicBoolean;
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.function.Function;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 public class MountTableRefresherService {
+
+    private enum RouterUpdateState {
+        SUCCESS,
+        FAIL,
+        TIMEOUT
+    }
+
+    private final Function<String, MountTableManager> createManager =
+            adminAddress -> new Others.MountTableManager(isLocalAdmin(adminAddress) ? "local" : adminAddress);
+
+    private final Predicate<String> doRefresh = adminAddress -> {
+        Thread.currentThread().setName("MountTableRefresh_" + adminAddress);
+        return createManager.apply(adminAddress).refresh();
+    };
 
     private Others.RouterStore routerStore = new Others.RouterStore();
     private long cacheUpdateTimeout;
@@ -69,13 +90,20 @@ public class MountTableRefresherService {
      * Refresh mount table cache of this router as well as all other routers.
      */
     public void refresh() {
-        List<MountTableRefresherThread> refreshThreads = routerStore.getCachedRecords()
+        List<Entry<String, CompletableFuture<RouterUpdateState>>> refreshThreads = routerStore.getCachedRecords()
                 .stream()
                 .map(RouterState::getAdminAddress)
                 .filter(adminAddress -> adminAddress != null && !adminAddress.isEmpty())
-                .map(adminAddress -> isLocalAdmin(adminAddress)
-                        ? getLocalRefresher(adminAddress)
-                        : new MountTableRefresherThread(new Others.MountTableManager(adminAddress), adminAddress)
+                .map(adminAddress -> new SimpleEntry<>(
+                                adminAddress,
+                                CompletableFuture.supplyAsync(() -> doRefresh.test(adminAddress)
+                                                ? RouterUpdateState.SUCCESS
+                                                : RouterUpdateState.FAIL
+                                        )
+                                        .completeOnTimeout(RouterUpdateState.TIMEOUT, cacheUpdateTimeout,
+                                                TimeUnit.MILLISECONDS)
+                                        .exceptionally(e -> RouterUpdateState.FAIL)
+                        )
                 )
                 .collect(Collectors.toList());
 
@@ -84,53 +112,38 @@ public class MountTableRefresherService {
         }
     }
 
-    protected MountTableRefresherThread getLocalRefresher(String adminAddress) {
-        return new MountTableRefresherThread(new Others.MountTableManager("local"), adminAddress);
-    }
-
     private void removeFromCache(String adminAddress) {
         routerClientsCache.invalidate(adminAddress);
     }
 
-    private void invokeRefresh(List<MountTableRefresherThread> refreshThreads) {
-        CountDownLatch countDownLatch = new CountDownLatch(refreshThreads.size());
-        // start all the threads
-        for (MountTableRefresherThread refThread : refreshThreads) {
-            refThread.setCountDownLatch(countDownLatch);
-            refThread.start();
-        }
-        try {
-            /*
-             * Wait for all the thread to complete, await method returns false if
-             * refresh is not finished within specified time
-             */
-            boolean allReqCompleted =
-                    countDownLatch.await(cacheUpdateTimeout, TimeUnit.MILLISECONDS);
-            if (!allReqCompleted) {
-                log("Not all router admins updated their cache");
-            }
-        } catch (InterruptedException e) {
-            log("Mount table cache refresher was interrupted.");
-        }
-        logResult(refreshThreads);
+    private void invokeRefresh(List<Entry<String, CompletableFuture<RouterUpdateState>>> refreshThreads) {
+        AtomicBoolean allReqCompleted = new AtomicBoolean(true);
+        AtomicInteger failureCount = new AtomicInteger();
+
+        refreshThreads.stream()
+                .map(entry -> new SimpleEntry<>(entry.getKey(), entry.getValue().join()))
+                .filter(entry -> entry.getValue() != RouterUpdateState.SUCCESS)
+                .forEach(entry -> {
+                    if (entry.getValue() == RouterUpdateState.TIMEOUT) {
+                        allReqCompleted.set(false);
+                    }
+
+                    removeFromCache(entry.getKey());
+                    failureCount.incrementAndGet();
+                });
+
+        logResult(refreshThreads.size() - failureCount.get(), failureCount.get(), allReqCompleted.get());
     }
 
     private boolean isLocalAdmin(String adminAddress) {
         return adminAddress.contains("local");
     }
 
-    private void logResult(List<MountTableRefresherThread> refreshThreads) {
-        int successCount = 0;
-        int failureCount = 0;
-        for (MountTableRefresherThread mountTableRefreshThread : refreshThreads) {
-            if (mountTableRefreshThread.isSuccess()) {
-                successCount++;
-            } else {
-                failureCount++;
-                // remove RouterClient from cache so that new client is created
-                removeFromCache(mountTableRefreshThread.getAdminAddress());
-            }
+    private void logResult(int successCount, int failureCount, boolean allReqCompleted) {
+        if (!allReqCompleted) {
+            log("Not all router admins updated their cache");
         }
+
         log(String.format(
                 "Mount table entries cache refresh successCount=%d,failureCount=%d",
                 successCount, failureCount));
