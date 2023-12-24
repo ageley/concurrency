@@ -6,46 +6,23 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNull;
-import static org.junit.jupiter.api.Assertions.assertThrows;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class CustomBlockingQueueTest {
     private static final List<String> EXPECTED_VALUES = List.of("a", "b", "c", "d");
     private static final int NUMBER_OF_WRITES = 100000;
     private static final int NUMBER_OF_LOOPS = 4;
-    private static final int SIZE_OF_QUEUE = NUMBER_OF_WRITES * EXPECTED_VALUES.size() * NUMBER_OF_LOOPS;
+    private static final int SIZE_OF_STARVING_QUEUE = NUMBER_OF_WRITES * EXPECTED_VALUES.size();
+    private static final int SIZE_OF_RESULTS = SIZE_OF_STARVING_QUEUE * NUMBER_OF_LOOPS;
 
     @Test
-    void singleThreadEnqueueDequeue() {
-        //given
-        CustomBlockingQueue<String> queue = new CustomBlockingQueue<>(EXPECTED_VALUES.size());
-        List<String> factualValues = new ArrayList<>();
-
-        //when
-        queue.enqueue(EXPECTED_VALUES.get(0));
-        queue.enqueue(EXPECTED_VALUES.get(1));
-        factualValues.add(queue.dequeue());
-        factualValues.add(queue.dequeue());
-        queue.enqueue(EXPECTED_VALUES.get(2));
-        queue.enqueue(EXPECTED_VALUES.get(3));
-        factualValues.add(queue.dequeue());
-        factualValues.add(queue.dequeue());
-
-        //then
-        assertEquals(0, queue.size());
-        assertTrue(factualValues.containsAll(EXPECTED_VALUES));
-    }
-
-    @Test
-    void capacityExceeded() {
+    void singleThreadEnqueueDequeue() throws InterruptedException {
         //given
         CustomBlockingQueue<String> queue = new CustomBlockingQueue<>(1);
 
@@ -54,54 +31,90 @@ class CustomBlockingQueueTest {
 
         //then
         assertEquals(1, queue.size());
-        assertThrows(IndexOutOfBoundsException.class, () -> queue.enqueue("b"));
+        assertEquals("a", queue.dequeue());
+        assertEquals(0, queue.size());
     }
 
     @Test
-    void queueIsEmpty() {
+    void capacityExceeded() throws InterruptedException, ExecutionException {
+        //given
+        CustomBlockingQueue<String> queue = new CustomBlockingQueue<>(1);
+
+        //when
+        queue.enqueue("a");
+        CompletableFuture<Void> writer = CompletableFuture.runAsync(() -> {
+            try {
+                queue.enqueue("b");
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+            }
+        });
+
+        //then
+        assertEquals(1, queue.size());
+        assertEquals("a", queue.dequeue());
+
+        //when
+        writer.get();
+
+        //then
+        assertEquals(1, queue.size());
+        assertEquals("b", queue.dequeue());
+        assertEquals(0, queue.size());
+    }
+
+    @Test
+    void queueIsEmpty() throws InterruptedException, ExecutionException {
         //given
         CustomBlockingQueue<String> queue = new CustomBlockingQueue<>(1);
 
         //when
         queue.enqueue("a");
         queue.dequeue();
+        CompletableFuture<String> reader = CompletableFuture.supplyAsync(() -> {
+            try {
+                return queue.dequeue();
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+            }
+
+            return null;
+        });
 
         //then
         assertEquals(0, queue.size());
-        assertNull(queue.dequeue());
+
+        //when
+        queue.enqueue("b");
+        assertEquals("b", reader.get());
+        assertEquals(0, queue.size());
     }
 
     @Test
-    void multiThreadEnqueueDequeue() {
+    void multiThreadEnqueueDequeue() throws ExecutionException, InterruptedException {
         //given
-        CustomBlockingQueue<String> queue =
-                new CustomBlockingQueue<>(SIZE_OF_QUEUE);
+        CustomBlockingQueue<String> queue = new CustomBlockingQueue<>(SIZE_OF_STARVING_QUEUE);
         List<String> factualValues = Collections.synchronizedList(new ArrayList<>());
-        CountDownLatch latch = new CountDownLatch(1);
 
         Runnable doEnqueue = () -> {
             try {
-                latch.await();
+                for (int i = 0; i < NUMBER_OF_WRITES; i++) {
+                    for (String value : EXPECTED_VALUES) {
+                        queue.enqueue(value);
+                    }
+                }
             } catch (InterruptedException e) {
-            }
-
-            for (int i = 0; i < NUMBER_OF_WRITES; i++) {
-                EXPECTED_VALUES.forEach(queue::enqueue);
+                Thread.currentThread().interrupt();
             }
         };
 
         Runnable doDequeue = () -> {
             try {
-                latch.await();
-            } catch (InterruptedException e) {
-            }
-
-            while (factualValues.size() != SIZE_OF_QUEUE) {
-                String value = queue.dequeue();
-
-                if (value != null) {
-                    factualValues.add(value);
+                while (factualValues.size() < SIZE_OF_RESULTS) {
+                    factualValues.add(queue.dequeue());
                 }
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
             }
         };
 
@@ -115,12 +128,14 @@ class CustomBlockingQueueTest {
                 .mapToObj(i -> CompletableFuture.runAsync(doDequeue, executor))
                 .collect(Collectors.toList());
 
+        CompletableFuture<Void> allWriters = CompletableFuture.allOf(writers.toArray(CompletableFuture[]::new));
+        CompletableFuture<Object> allReaders = CompletableFuture.anyOf(readers.toArray(CompletableFuture[]::new));
+        CompletableFuture<Void> allWorkers = CompletableFuture.allOf(allWriters, allReaders);
+
         //when
-        latch.countDown();
-        writers.forEach(CompletableFuture::join);
-        readers.forEach(CompletableFuture::join);
+        allWorkers.get();
 
         //then
-        assertEquals(SIZE_OF_QUEUE, factualValues.size());
+        assertEquals(0, queue.size());
     }
 }

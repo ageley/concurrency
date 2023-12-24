@@ -1,6 +1,7 @@
 package course.concurrency.m5_streams.queue;
 
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.ReentrantLock;
 
 public class CustomBlockingQueue<T> {
@@ -17,29 +18,34 @@ public class CustomBlockingQueue<T> {
     private final int capacity;
     private final AtomicInteger size;
     private final ReentrantLock lock;
+    private final Condition notFull;
+    private final Condition notEmpty;
 
     public CustomBlockingQueue(int capacity) {
         this.capacity = capacity;
-        this.size = new AtomicInteger();
-        this.lock = new ReentrantLock();
+        size = new AtomicInteger();
+        lock = new ReentrantLock();
+        notFull = lock.newCondition();
+        notEmpty = lock.newCondition();
     }
 
     public int size() {
         return size.get();
     }
 
-    private Node<T> head;
-    private Node<T> tail;
+    private volatile Node<T> head;
+    private volatile Node<T> tail;
 
-    public void enqueue(T value) {
-        if (size.get() == capacity) {
-            throw new IndexOutOfBoundsException("Queue reached capacity = " + capacity);
-        }
-
+    public void enqueue(T value) throws InterruptedException {
+        int prevSize = -1;
         Node<T> node = new Node<>(value, null);
 
         try {
-            lock.lock();
+            lock.lockInterruptibly();
+
+            while (size.get() == capacity) {
+                notFull.await();
+            }
 
             if (head != null) {
                 head.next = node;
@@ -51,22 +57,24 @@ public class CustomBlockingQueue<T> {
                 tail = head;
             }
 
-            size.incrementAndGet();
+            prevSize = size.getAndIncrement();
         } finally {
+            if (prevSize == 0) {
+                notEmpty.signal();
+            }
+
             lock.unlock();
         }
     }
 
-    public T dequeue() {
-        if (tail == null) {
-            return null;
-        }
+    public T dequeue() throws InterruptedException {
+        int prevSize = -1;
 
         try {
-            lock.lock();
+            lock.lockInterruptibly();
 
-            if (tail == null) {
-                return null;
+            while (tail == null) {
+                notEmpty.await();
             }
 
             Node<T> node = tail;
@@ -77,9 +85,13 @@ public class CustomBlockingQueue<T> {
                 head = null;
             }
 
-            size.decrementAndGet();
+            prevSize = size.getAndDecrement();
             return node.value;
         } finally {
+            if (prevSize == capacity) {
+                notFull.signalAll();
+            }
+
             lock.unlock();
         }
     }
