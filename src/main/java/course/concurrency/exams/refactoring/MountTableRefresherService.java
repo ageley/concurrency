@@ -7,10 +7,12 @@ import java.util.AbstractMap.SimpleEntry;
 import java.util.List;
 import java.util.Map.Entry;
 import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.TimeUnit;
+import java.util.concurrent.TimeoutException;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.Function;
@@ -90,7 +92,7 @@ public class MountTableRefresherService {
      * Refresh mount table cache of this router as well as all other routers.
      */
     public void refresh() {
-        List<Entry<String, CompletableFuture<RouterUpdateState>>> refreshThreads = routerStore.getCachedRecords()
+        List<Entry<String, CompletableFuture<RouterUpdateState>>> refreshers = routerStore.getCachedRecords()
                 .stream()
                 .map(RouterState::getAdminAddress)
                 .filter(adminAddress -> adminAddress != null && !adminAddress.isEmpty())
@@ -107,8 +109,8 @@ public class MountTableRefresherService {
                 )
                 .collect(Collectors.toList());
 
-        if (!refreshThreads.isEmpty()) {
-            invokeRefresh(refreshThreads);
+        if (!refreshers.isEmpty()) {
+            invokeRefresh(refreshers);
         }
     }
 
@@ -116,30 +118,55 @@ public class MountTableRefresherService {
         routerClientsCache.invalidate(adminAddress);
     }
 
-    private void invokeRefresh(List<Entry<String, CompletableFuture<RouterUpdateState>>> refreshThreads) {
+    private void invokeRefresh(List<Entry<String, CompletableFuture<RouterUpdateState>>> refreshers) {
+        AtomicBoolean isInterrupted = new AtomicBoolean(false);
         AtomicBoolean allReqCompleted = new AtomicBoolean(true);
         AtomicInteger failureCount = new AtomicInteger();
 
-        refreshThreads.stream()
-                .map(entry -> new SimpleEntry<>(entry.getKey(), entry.getValue().join()))
-                .filter(entry -> entry.getValue() != RouterUpdateState.SUCCESS)
-                .forEach(entry -> {
-                    if (entry.getValue() == RouterUpdateState.TIMEOUT) {
-                        allReqCompleted.set(false);
-                    }
+        CompletableFuture<Void> awaitAll = CompletableFuture.allOf(refreshers.stream()
+                .map(Entry::getValue)
+                .toArray(CompletableFuture[]::new)
+        );
 
-                    removeFromCache(entry.getKey());
-                    failureCount.incrementAndGet();
-                });
+        try {
+            awaitAll.get();
+        } catch (InterruptedException | ExecutionException e) {
+            isInterrupted.set(true);
+        }
 
-        logResult(refreshThreads.size() - failureCount.get(), failureCount.get(), allReqCompleted.get());
+        for (Entry<String, CompletableFuture<RouterUpdateState>> refresher : refreshers) {
+            RouterUpdateState value;
+
+            try {
+                value = refresher.getValue().get(0L, TimeUnit.SECONDS);
+            } catch (InterruptedException | ExecutionException | TimeoutException e) {
+                isInterrupted.set(true);
+                value = RouterUpdateState.FAIL;
+            }
+
+            if (value != RouterUpdateState.SUCCESS) {
+                if (value == RouterUpdateState.TIMEOUT) {
+                    allReqCompleted.set(false);
+                }
+
+                removeFromCache(refresher.getKey());
+                failureCount.incrementAndGet();
+            }
+        }
+
+        logResult(refreshers.size() - failureCount.get(), failureCount.get(), allReqCompleted.get(),
+                isInterrupted.get());
     }
 
     private boolean isLocalAdmin(String adminAddress) {
         return adminAddress.contains("local");
     }
 
-    private void logResult(int successCount, int failureCount, boolean allReqCompleted) {
+    private void logResult(int successCount, int failureCount, boolean allReqCompleted, boolean isInterrupted) {
+        if (isInterrupted) {
+            log("Mount table cache refresher was interrupted.");
+        }
+
         if (!allReqCompleted) {
             log("Not all router admins updated their cache");
         }

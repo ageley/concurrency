@@ -147,8 +147,30 @@ class MountTableRefresherServiceTests {
         // when
         mockedService.refresh();
 
+        // then
         verify(mockedService).log("Not all router admins updated their cache");
         verify(mockedService).log("Mount table entries cache refresh successCount=3,failureCount=1");
         verify(routerClientsCache, times(1)).invalidate(anyString());
+    }
+
+    @Test
+    @DisplayName("Refresher was interrupted")
+    void refresherWasInterrupted() throws IllegalAccessException, InterruptedException {
+        // given
+        when(manager.refresh())
+                .then(invocation -> {
+                    Thread.sleep(CACHE_UPDATE_TIMEOUT + 5);
+                    return true;
+                });
+        createManager.set(service, (Function<String, MountTableManager>) adminAddress -> manager);
+
+        // when
+        Thread.currentThread().interrupt();
+        mockedService.refresh();
+
+        // then
+        verify(mockedService).log("Mount table cache refresher was interrupted.");
+        verify(mockedService).log("Mount table entries cache refresh successCount=0,failureCount=4");
+        verify(routerClientsCache, times(4)).invalidate(anyString());
     }
 }
