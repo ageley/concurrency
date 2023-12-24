@@ -36,15 +36,14 @@ public class CustomBlockingQueue<T> {
     private volatile Node<T> head;
     private volatile Node<T> tail;
 
-    public void enqueue(T value) throws InterruptedException {
-        int prevSize = -1;
+    public void enqueue(T value) {
         Node<T> node = new Node<>(value, null);
 
         try {
-            lock.lockInterruptibly();
+            lock.lock();
 
             while (size.get() == capacity) {
-                notFull.await();
+                notFull.awaitUninterruptibly();
             }
 
             if (head != null) {
@@ -57,24 +56,20 @@ public class CustomBlockingQueue<T> {
                 tail = head;
             }
 
-            prevSize = size.getAndIncrement();
-        } finally {
-            if (prevSize == 0) {
-                notEmpty.signal();
+            if (size.getAndIncrement() == 0) {
+                notEmpty.signalAll();
             }
-
+        } finally {
             lock.unlock();
         }
     }
 
-    public T dequeue() throws InterruptedException {
-        int prevSize = -1;
-
+    public T dequeue() {
         try {
-            lock.lockInterruptibly();
+            lock.lock();
 
-            while (tail == null) {
-                notEmpty.await();
+            while (size.get() == 0) {
+                notEmpty.awaitUninterruptibly();
             }
 
             Node<T> node = tail;
@@ -85,13 +80,12 @@ public class CustomBlockingQueue<T> {
                 head = null;
             }
 
-            prevSize = size.getAndDecrement();
-            return node.value;
-        } finally {
-            if (prevSize == capacity) {
+            if (size.getAndDecrement() == capacity) {
                 notFull.signalAll();
             }
 
+            return node.value;
+        } finally {
             lock.unlock();
         }
     }
